@@ -172,7 +172,7 @@ $('.js-scrollbar').mCustomScrollbar({
     axis: 'y',
     theme: 'dark-thick',
     scrollInertia: '330',
-    setHeight: 800,
+    setHeight: 570,
     scrollButtons: true,
     scrollButtons: {enable: true}
 });
@@ -196,4 +196,5 @@ for (let el of tabLinks) {
     panel[0].classList.add("is-active");
     });
   }
+
 

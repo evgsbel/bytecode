@@ -264,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "h-04-usage",
-      viewBox: "0 0 344 236",
+      viewBox: "0 0 297 236",
       url: __webpack_require__.p + "assets/img/svg/sprite.svg#h-04",
       toString: function () {
         return this.url;
@@ -557,7 +557,7 @@ $('.js-scrollbar').mCustomScrollbar(_defineProperty({
   axis: 'y',
   theme: 'dark-thick',
   scrollInertia: '330',
-  setHeight: 800,
+  setHeight: 570,
   scrollButtons: true
 }, "scrollButtons", {
   enable: true
@@ -602,4 +602,4 @@ try {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.7afb6d4af048fa364aca.js.map
+//# sourceMappingURL=app.576ba1d7ea9cf090d9fe.js.map
