@@ -197,4 +197,14 @@ for (let el of tabLinks) {
     });
   }
 
+ $('.js-package__input').change(function () {
+    if ($(this).is(':checked')) {
+        $(this).parent().removeClass('unchecked');
+        $(this).parent().addClass('checked');
+    }
+    else {
+        $(this).parent().removeClass('checked');
+        $(this).parent().addClass('unchecked');
+    }
+});
 

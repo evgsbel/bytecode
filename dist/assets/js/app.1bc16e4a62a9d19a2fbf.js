@@ -597,9 +597,19 @@ try {
 } finally {
   _iterator.f();
 }
+
+$('.js-package__input').change(function () {
+  if ($(this).is(':checked')) {
+    $(this).parent().removeClass('unchecked');
+    $(this).parent().addClass('checked');
+  } else {
+    $(this).parent().removeClass('checked');
+    $(this).parent().addClass('unchecked');
+  }
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.576ba1d7ea9cf090d9fe.js.map
+//# sourceMappingURL=app.1bc16e4a62a9d19a2fbf.js.map
