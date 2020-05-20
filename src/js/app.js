@@ -91,8 +91,8 @@ function formatState(state) {
         return state.text;
     }
 
-    var baseUrl = "./assets/img/";
-    var $state = $(
+    let baseUrl = "./assets/img/";
+    let $state = $(
         '<span class="d-flex align-items-center"><div class="header__currency-img"><img class="" /></div> <span class="header__currency-title"></span></span>'
     );
 
@@ -182,29 +182,45 @@ const tabLinks = document.querySelectorAll(".tabs a");
 const tabPanels = document.querySelectorAll(".tabs-panel");
 
 for (let el of tabLinks) {
-  el.addEventListener("click", e => {
-    e.preventDefault();
+    el.addEventListener("click", e => {
+        e.preventDefault();
 
-    document.querySelector(".tabs div.is-active").classList.remove("is-active");
-    document.querySelector(".tabs-panel.is-active").classList.remove("is-active");
+        document.querySelector(".tabs div.is-active").classList.remove("is-active");
+        document.querySelector(".tabs-panel.is-active").classList.remove("is-active");
 
-    const parentListItem = el.parentElement;
-    parentListItem.classList.add("is-active");
-    const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
+        const parentListItem = el.parentElement;
+        parentListItem.classList.add("is-active");
+        const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
 
-    const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
-    panel[0].classList.add("is-active");
+        const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
+        panel[0].classList.add("is-active");
     });
-  }
+}
 
- $('.js-package__input').change(function () {
+$('.js-package__input').change(function () {
     if ($(this).is(':checked')) {
         $(this).parent().removeClass('unchecked');
         $(this).parent().addClass('checked');
-    }
-    else {
+    } else {
         $(this).parent().removeClass('checked');
         $(this).parent().addClass('unchecked');
     }
 });
 
+// input file
+let inputs = document.querySelectorAll('.inputfile');
+Array.prototype.forEach.call(inputs, function (input) {
+    let label = input.nextElementSibling,
+        labelVal = label.innerHTML;
+    input.addEventListener('change', function (e) {
+        let fileName = '';
+        if (this.files && this.files.length > 1)
+            fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+        else
+            fileName = e.target.value.split('\\').pop();
+        if (fileName)
+            label.querySelector('span').innerHTML = fileName;
+        else
+            label.innerHTML = labelVal;
+    });
+});

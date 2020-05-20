@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bytecode</title>
-<link href="assets/css/vendors.1bc16e4a62a9d19a2fbf.css" rel="stylesheet"><link href="assets/css/app.1bc16e4a62a9d19a2fbf.css" rel="stylesheet"></head>
+<link href="assets/css/vendors.f391bfd8a3688ec5bb2f.css" rel="stylesheet"><link href="assets/css/app.f391bfd8a3688ec5bb2f.css" rel="stylesheet"></head>
 <body>
 <div class="grid-layout">
     <div class="header-design"></div>
@@ -779,7 +779,41 @@
             </div>
         </div>
     </section>
+    <section class="feedback">
+        <div class="container">
+            <div class="title text-center">Заявка на предпроектное обследование</div>
+            <div class="feedback__subtitle">Оставьте заявку на подготовительные работы по вашему проекту <br>
+                Мы обработаем запрос и свяжемся с вами в течение дня
+            </div>
+            <form class="feedback__wrapper form">
+                <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
+                       required>
+                <input type="text" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
+                       required>
+                <input type="text" class="form__input feedback__input" name="feedback__phone" placeholder="Телефон"
+                       required>
+                <textarea name="feedback__comm" class="feedback__comm form__comm" id=""
+                          placeholder="Ваше сообщение"></textarea>
+                <div class="feedback__file-wrapper">
+                    <input type="file" name="feed__file" id="feed__file" class="inputfile feedback__file"
+                           data-multiple-caption="{count} files selected" multiple>
+                    <label for="feed__file">
+                        <svg width="18" height="19" viewBox="0 0 18 19">
+                            <use xlink:href="#input-file"></use>
+                        </svg>
+                        <span>Прикрепить файл</span></label>
+                </div>
+                <div class="recaptcha feedback__recaptcha">
+                    <img src="./assets/img/recaptcha.png" alt="">
+                </div>
+                <div class="confidencial feedback__confidencial">
+                    Нажимая на кнопку «Отправить сообщение», вы даёте согласие на <a href="">обработку персональных данных</a>
+                </div>
+                <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+            </form>
+        </div>
+    </section>
 </div>
 <div id="svg-icons"></div>
-<script src="assets/js/vendors.1bc16e4a62a9d19a2fbf.js"></script><script src="assets/js/app.1bc16e4a62a9d19a2fbf.js"></script></body>
+<script src="assets/js/vendors.f391bfd8a3688ec5bb2f.js"></script><script src="assets/js/app.f391bfd8a3688ec5bb2f.js"></script></body>
 </html>

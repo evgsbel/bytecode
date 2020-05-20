@@ -167,6 +167,7 @@ var map = {
 	"./h-02.svg": "./src/assets/img/svg/h-02.svg",
 	"./h-03.svg": "./src/assets/img/svg/h-03.svg",
 	"./h-04.svg": "./src/assets/img/svg/h-04.svg",
+	"./input-file.svg": "./src/assets/img/svg/input-file.svg",
 	"./logo.svg": "./src/assets/img/svg/logo.svg",
 	"./text-look.svg": "./src/assets/img/svg/text-look.svg"
 };
@@ -266,6 +267,26 @@ __webpack_require__.r(__webpack_exports__);
       id: "h-04-usage",
       viewBox: "0 0 297 236",
       url: __webpack_require__.p + "assets/img/svg/sprite.svg#h-04",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/assets/img/svg/input-file.svg":
+/*!*******************************************!*\
+  !*** ./src/assets/img/svg/input-file.svg ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "input-file-usage",
+      viewBox: "0 0 18 19",
+      url: __webpack_require__.p + "assets/img/svg/sprite.svg#input-file",
       toString: function () {
         return this.url;
       }
@@ -606,10 +627,21 @@ $('.js-package__input').change(function () {
     $(this).parent().removeClass('checked');
     $(this).parent().addClass('unchecked');
   }
+}); // input file
+
+var inputs = document.querySelectorAll('.inputfile');
+Array.prototype.forEach.call(inputs, function (input) {
+  var label = input.nextElementSibling,
+      labelVal = label.innerHTML;
+  input.addEventListener('change', function (e) {
+    var fileName = '';
+    if (this.files && this.files.length > 1) fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);else fileName = e.target.value.split('\\').pop();
+    if (fileName) label.querySelector('span').innerHTML = fileName;else label.innerHTML = labelVal;
+  });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.1bc16e4a62a9d19a2fbf.js.map
+//# sourceMappingURL=app.f391bfd8a3688ec5bb2f.js.map

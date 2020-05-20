@@ -1,0 +1,33 @@
+.inputfile
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+  transition: $trans
+  + label
+    color: $black1
+    cursor: pointer
+    width: 100%
+    display: flex
+    height: 100%
+    justify-content: center
+    align-items: center
+    background: linear-gradient(180deg, #E10000 0%, #FFFFFF 0.01%, #F2F2F2 100%)
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2)
+    border-radius: 3px
+    transition: $trans
+    svg
+      margin-right: 18px
+  &:focus
+    + label
+      background-color: red
+    + label
+      outline: 1px dotted #000
+      outline: -webkit-focus-ring-color auto 5px
+  + label:hover
+    background: linear-gradient(180deg, #F4F4F4 0%, #EEEDED 100%)
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1)
+  + label *
+    pointer-events: none
