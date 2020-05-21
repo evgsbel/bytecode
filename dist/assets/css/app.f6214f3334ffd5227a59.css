@@ -381,7 +381,8 @@ template {
   justify-content: center;
   align-items: center;
   transition: 0.3s all ease-in-out;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
   .btn:hover {
     color: #fff;
     background: linear-gradient(180deg, #E10000 0%, #FF4013 100%);
@@ -460,12 +461,11 @@ template {
 .mCSB_dragger_bar:before {
   content: "";
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7));
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 14px;
   position: absolute;
   top: -60px;
-  left: -20px;
-  transform: skewX(236deg);
+  left: 0;
   transition: all 0.1s;
   animation-name: slideme;
   animation-duration: 3s;
@@ -775,7 +775,8 @@ p {
       box-sizing: border-box;
       padding: 5px 30px;
       font-family: "montserratmedium", serif;
-      color: #1E2127; }
+      color: #1E2127;
+      text-decoration: none; }
 
 .logo__title {
   font-size: 13px;
@@ -1699,6 +1700,92 @@ p {
 .svg-icons {
   display: none; }
 
+.modal {
+  width: 954px;
+  max-width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  overflow: visible; }
+  .modal .form {
+    margin: 0 auto; }
+  .modal .title {
+    margin-bottom: 20px; }
+  .modal .feedback__subtitle, .modal .confidencial {
+    color: #000; }
+  .modal .confidencial {
+    margin-top: 30px; }
+  .modal .feedback__recaptcha {
+    margin-top: 0; }
+  .modal .feedback__btn {
+    margin-top: 0; }
+  .modal__close {
+    position: absolute;
+    right: 0;
+    border: 0;
+    background-color: transparent;
+    top: -40px;
+    color: #fff;
+    font-family: "montserratbold", serif;
+    font-size: 13px;
+    letter-spacing: 0.025em;
+    display: flex;
+    align-items: center;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer; }
+    .modal__close svg {
+      margin-left: 12px;
+      stroke: #fff;
+      transition: 0.3s all ease-in-out; }
+    .modal__close:hover {
+      color: #E10000; }
+      .modal__close:hover svg {
+        stroke: #E10000; }
+    .modal__close:focus, .modal__close:active {
+      outline: none; }
+
+.free {
+  margin: 50px 0; }
+  .free .feedback__wrapper {
+    display: block; }
+  .free .feedback__input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px; }
+
+.presentation .feedback__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.presentation .feedback__input {
+  width: 32%;
+  height: 50px;
+  margin-bottom: 20px;
+  display: inline-block; }
+  .presentation .feedback__input:nth-child(4), .presentation .feedback__input:nth-child(5) {
+    width: 49%; }
+
+.presentation .feedback__comm {
+  width: 100%;
+  height: 135px;
+  margin-bottom: 20px; }
+
+.presentation .feedback__recaptcha {
+  margin: 0 auto; }
+
+.presentation .confidencial {
+  margin: 20px auto 0; }
+
+.predesign {
+  margin: 50px 0; }
+
+.result svg {
+  display: block;
+  margin: 0 auto; }
+
+.fancybox-bg {
+  background: #3D525D; }
 
 
-/*# sourceMappingURL=app.2091238478f25853e46d.css.map*/
+
+/*# sourceMappingURL=app.f6214f3334ffd5227a59.css.map*/

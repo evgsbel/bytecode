@@ -169,6 +169,8 @@ var map = {
 	"./h-04.svg": "./src/assets/img/svg/h-04.svg",
 	"./input-file.svg": "./src/assets/img/svg/input-file.svg",
 	"./logo.svg": "./src/assets/img/svg/logo.svg",
+	"./modal-close.svg": "./src/assets/img/svg/modal-close.svg",
+	"./modal-result.svg": "./src/assets/img/svg/modal-result.svg",
 	"./social-01.svg": "./src/assets/img/svg/social-01.svg",
 	"./social-02.svg": "./src/assets/img/svg/social-02.svg",
 	"./social-03.svg": "./src/assets/img/svg/social-03.svg",
@@ -312,6 +314,46 @@ __webpack_require__.r(__webpack_exports__);
       id: "logo-usage",
       viewBox: "0 0 224 47",
       url: __webpack_require__.p + "assets/img/svg/sprite.svg#logo",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/assets/img/svg/modal-close.svg":
+/*!********************************************!*\
+  !*** ./src/assets/img/svg/modal-close.svg ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "modal-close-usage",
+      viewBox: "0 0 27 27",
+      url: __webpack_require__.p + "assets/img/svg/sprite.svg#modal-close",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/assets/img/svg/modal-result.svg":
+/*!*********************************************!*\
+  !*** ./src/assets/img/svg/modal-result.svg ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "modal-result-usage",
+      viewBox: "0 0 64 65",
+      url: __webpack_require__.p + "assets/img/svg/sprite.svg#modal-result",
       toString: function () {
         return this.url;
       }
@@ -524,7 +566,7 @@ fetch("./assets/img/svg//sprite.svg").then(function (res) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+/* WEBPACK VAR INJECTION */(function($, jQuery) {function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
@@ -546,9 +588,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 // //     });
 // // });
 $(document).ready(function () {
-  $('.js-hover-hide-phone').hover(function visibleHidePhone() {
-    $(this).find('.top-contacts__hide').toggleClass('is-visible');
-  });
+  //ancors
+  $("a.js-ancor-link").click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: destination
+    }, 800);
+    return false;
+  }); //SLIDERS
+
   var arrow_prev = "<svg width='24' height='43' viewBox='0 0 24 43' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M22.5 2L3 21.5L22.5 41' ' stroke-width='3'/></svg>",
       arrow_next = "<svg width='24' height='43' viewBox='0 0 24 43' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 2L21.5 21.5L2 41'  stroke-width='3'/></svg>"; // js-banner-slider
 
@@ -604,79 +653,6 @@ $(function () {
     $(this).toggleClass('is-active');
     $('.mobile-hide').toggleClass('is-open').slideToggle(); //     .removeClass('feed-open');
   });
-});
-$(function () {
-  $(".js-select").select2({
-    language: "ru",
-    minimumResultsForSearch: -1
-  });
-});
-
-function formatState(state) {
-  if (!state.id) {
-    return state.text;
-  }
-
-  var baseUrl = "./assets/img/";
-  var $state = $('<span class="d-flex align-items-center"><div class="header__currency-img"><img class="" /></div> <span class="header__currency-title"></span></span>'); // Use .text() instead of HTML string concatenation to avoid script injection issues
-
-  $state.find("span").text(state.text);
-  $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
-  return $state;
-}
-
-;
-$(".js-select-state").select2({
-  templateSelection: formatState,
-  templateResult: formatState,
-  language: "ru",
-  minimumResultsForSearch: -1,
-  id: "id"
-}); // fix header
-
-$(function () {
-  $fixBlock = $('.fixed');
-  $fixBlock.css('width', $fixBlock.outerWidth());
-  $window = $(window); // $h = $fixBlock.offset().top;
-
-  $window.scroll(function () {
-    if ($window.scrollTop() > 180) {
-      $fixBlock.addClass('is-active');
-      $fixBlock.fadeIn();
-    } else {
-      $fixBlock.removeClass('is-active');
-      $fixBlock.fadeOut();
-    }
-  });
-});
-$('.js-open-fix-header').click(function openFixHeader() {
-  $(this).toggleClass('is-active');
-  $(this).closest('.fixed').find('.header').slideToggle();
-});
-$('[data-fancybox]').fancybox({
-  btnTpl: {
-    smallBtn: '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small modal-form__close" title="{{CLOSE}}">' + '<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"/></svg>' + "</button>"
-  }
-}); // input count
-
-$(function () {
-  (function quantityProducts() {
-    var $quantityArrowMinus = $(".input-count__btn_minus");
-    var $quantityArrowPlus = $(".input-count__btn_plus");
-    var $quantityNum = $(".input-count__input");
-    $quantityArrowMinus.click(quantityMinus);
-    $quantityArrowPlus.click(quantityPlus);
-
-    function quantityMinus() {
-      if ($quantityNum.val() > 1) {
-        $quantityNum.val(+$quantityNum.val() - 1);
-      }
-    }
-
-    function quantityPlus() {
-      $quantityNum.val(+$quantityNum.val() + 1);
-    }
-  })();
 }); //scroll bar
 
 $('.js-scrollbar').mCustomScrollbar(_defineProperty({
@@ -717,7 +693,8 @@ try {
 
   for (_iterator.s(); !(_step = _iterator.n()).done;) {
     _loop();
-  }
+  } //checkbox
+
 } catch (err) {
   _iterator.e(err);
 } finally {
@@ -744,9 +721,14 @@ Array.prototype.forEach.call(inputs, function (input) {
     if (fileName) label.querySelector('span').innerHTML = fileName;else label.innerHTML = labelVal;
   });
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+$('[data-fancybox]').fancybox({
+  btnTpl: {
+    smallBtn: '<button type="button" data-fancybox-close class="modal__close" title="{{CLOSE}}">' + 'закрыть' + '<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">' + '<use xlink:href="#modal-close"></use>' + '</svg>' + "</button>"
+  }
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.2091238478f25853e46d.js.map
+//# sourceMappingURL=app.f6214f3334ffd5227a59.js.map

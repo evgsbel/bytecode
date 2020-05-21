@@ -34,7 +34,7 @@
                         481-46-96</a>
                     <a href="mailto:sales@bytecodecrm.ru" class="header__info-email header__icon header__icon_email">sales@bytecodecrm.ru</a>
                 </div>
-                <button class="header__callback btn btn_red">Задать вопрос</button>
+                <a href="#callback" class="header__callback btn btn_red" data-fancybox="">Задать вопрос</a>
             </div>
             <div class="header__content">
                 <div class="header__content_wrapper">
@@ -57,17 +57,17 @@
                 </div>
             </div>
             <div class="header__nav">
-                <button class="header__nav_item btn">Возможности</button>
-                <button class="header__nav_item btn">Преимущества</button>
-                <button class="header__nav_item btn">Пакеты Service Creatio</button>
-                <button class="header__nav_item btn">Методология</button>
-                <button class="header__nav_item btn">О компании</button>
-                <button class="header__nav_item btn">Наши клиенты</button>
-                <button class="header__nav_item btn">Контакты</button>
+                <a href="#service" class="header__nav_item btn js-ancor-link">Возможности</a>
+                <a href="#advantages" class="header__nav_item btn js-ancor-link">Преимущества</a>
+                <a href="#packages" class="header__nav_item btn js-ancor-link">Пакеты Service Creatio</a>
+                <a href="#methodology" class="header__nav_item btn js-ancor-link">Методология</a>
+                <a href="#about" class="header__nav_item btn js-ancor-link">О компании</a>
+                <a href="#clients" class="header__nav_item btn js-ancor-link">Наши клиенты</a>
+                <a href="#contacts" class="header__nav_item btn js-ancor-link">Контакты</a>
             </div>
         </header>
     </div>
-    <section class="service tabs-container">
+    <section class="service tabs-container" id="service">
         <div class="service__white"></div>
         <div class="service__title">
             Service Creatio
@@ -385,7 +385,7 @@
             </div>
         </div>
     </section>
-    <section class="help">
+    <section class="help" id="advantages">
         <div class="container">
             <div class="title">Помогаем решать сложные <br>
                 задачи компаний
@@ -526,13 +526,14 @@
                     <p>Находите нужную функцию и информацию, не задумываясь — c приложением одинаково
                         удобно работать на компьютере, планшете и смартфоне.</p>
                     <div class="interface__btns">
-                        <button class="btn btn interface__btn interface__btn_trns">Заказать презентацию</button>
-                        <button class="btn btn_red interface__btn interface__btn_red">Демо</button>
+                        <a href="#presentation" data-fancybox class="btn btn interface__btn interface__btn_trns">Заказать
+                            презентацию</a>
+                        <a href="#result" data-fancybox class="btn btn_red interface__btn interface__btn_red">Демо</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="package">
+        <section class="package" id="packages">
             <div class="container">
                 <div class="title text-center">Выберите подходящий пакет Service Creatio</div>
                 <div class="package__wrapper">
@@ -587,7 +588,7 @@
                                     <div class="package__checkbox-text">on-site</div>
                                 </label>
                             </div>
-                            <button class="btn btn_red package__btn">Попробовать бесплатно</button>
+                            <a href="#free" data-fancybox class="btn btn_red package__btn">Попробовать бесплатно</a>
                         </div>
                     </div>
                     <div class="package__item package__item_right">
@@ -637,14 +638,14 @@
                                     <div class="package__checkbox-text">on-site</div>
                                 </label>
                             </div>
-                            <button class="btn btn_red package__btn">Попробовать бесплатно</button>
+                            <a href="#free" data-fancybox class="btn btn_red package__btn">Попробовать бесплатно</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <section class="methodology">
+    <section class="methodology" id="methodology">
         <div class="container">
             <div class="title">Методология ведения проекта</div>
             <p>Схема организации проекта внедрения системы Creatio — это эталонный жизненный цикл проекта, основанный на
@@ -815,7 +816,7 @@
             </form>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="about__info">
             <div class="title">О компании ByteCode</div>
             <p><b>ByteCode — команда профессионалов</b>, которая занимается проектами внедрения CRM-систем на платформе
@@ -845,7 +846,7 @@
             <img src="./assets/img/about.png" alt="">
         </div>
     </section>
-    <section class="soft with-work">
+    <section class="soft with-work" id="clients">
         <div class="container soft__container">
             <div class="title">Уже работают с Service Creatio</div>
             <div class="soft__wrapper">
@@ -867,7 +868,7 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="title text-center">Контакты</div>
             <div class="contacts__wrapper">
@@ -942,7 +943,7 @@
                     Creatio (enterprise edition) может рассчитываться отдельно.
                 </li>
             </ul>
-            <button class="btn additionally__btn">Вернуться к тарифам</button>
+            <a href="#packages" class="btn additionally__btn js-anc js-ancor-link">Вернуться к тарифам</a>
         </div>
     </section>
     <footer class="footer">
@@ -962,18 +963,26 @@
             </div>
             <div class="footer_center">
                 <ul class="footer__nav">
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Возможности</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Преимущества</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Пакеты Service Creatio</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Методология</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">О компании</a></li>
+                    <li class="footer__nav-item"><a href="#service"
+                                                    class="footer__nav-link js-ancor-link">Возможности</a></li>
+                    <li class="footer__nav-item"><a href="#advantages" class="footer__nav-link js-ancor-link">Преимущества</a>
+                    </li>
+                    <li class="footer__nav-item"><a href="#packages" class="footer__nav-link js-ancor-link">Пакеты
+                        Service Creatio</a></li>
+                    <li class="footer__nav-item"><a href="#methodology" class="footer__nav-link js-ancor-link">Методология</a>
+                    </li>
+                    <li class="footer__nav-item"><a href="#about" class="footer__nav-link js-ancor-link">О компании</a>
+                    </li>
                 </ul>
             </div>
             <div class="footer_right">
                 <ul class="footer__nav">
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Наши клиенты</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Контакты</a></li>
-                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Согласие на обработку персональных
+                    <li class="footer__nav-item"><a href="#clients" class="footer__nav-link js-ancor-link">Наши
+                        клиенты</a></li>
+                    <li class="footer__nav-item"><a href="#contacts" class="footer__nav-link js-ancor-link">Контакты</a>
+                    </li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link js-ancor-link">Согласие на обработку
+                        персональных
                         данных</a></li>
                 </ul>
             </div>
@@ -986,7 +995,7 @@
                         </svg>
                     </a>
                     <a href="" class="footer__social-item footer__social-item_ins">
-                        <svg  width="21" height="21" viewBox="0 0 21 21">
+                        <svg width="21" height="21" viewBox="0 0 21 21">
                             <use xlink:href="#social-02"></use>
                         </svg>
                     </a>
@@ -1009,6 +1018,129 @@
             </div>
         </div>
     </footer>
+</div>
+<div class="free modal" style="display: none;" id="free">
+    <div class="title text-center">Бесплатная 14-дневная версия</div>
+    <div class="feedback__subtitle">Отправьте запрос нашим специалистам <br>
+        Мы вышлем ссылку для доступа к 14-дневной версию CRM-системы
+    </div>
+    <form class="feedback__wrapper form">
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
+               required>
+        <input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания*"
+               required>
+        <input type="number" class="form__input feedback__input" name="feedback__people"
+               placeholder="Количество сотрудников*"
+               required>
+        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
+               required>
+        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="Телефон"
+               required>
+        <input type="text" class="form__input feedback__input" name="feedback__city" placeholder="Город*"
+               required>
+        <div class="recaptcha feedback__recaptcha">
+            <img src="./assets/img/recaptcha.png" alt="">
+        </div>
+        <div class="confidencial feedback__confidencial">
+            Нажимая на кнопку «Отправить сообщение», вы даёте согласие на <a href="">обработку персональных
+            данных</a>
+        </div>
+        <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+    </form>
+</div>
+<div class="modal" style="display: none;" id="callback">
+    <div class="title text-center">Задайте вопрос</div>
+    <div class="feedback__subtitle">Задайте вопрос по Service Creatio нашим специалистам <br>
+        Мы отвечаем на все запросы в течение дня
+    </div>
+    <form class="feedback__wrapper form">
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
+               required>
+        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
+               required>
+        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="Телефон"
+               required>
+        <textarea name="feedback__comm" class="feedback__comm form__comm" id=""
+                  placeholder="Ваше сообщение"></textarea>
+        <div class="recaptcha feedback__recaptcha">
+            <img src="./assets/img/recaptcha.png" alt="">
+        </div>
+        <div class="confidencial feedback__confidencial">
+            Нажимая на кнопку «Отправить сообщение», вы даёте согласие на <a href="">обработку персональных
+            данных</a>
+        </div>
+        <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+    </form>
+</div>
+<div class="presentation modal" style="display: none;" id="presentation">
+    <div class="title text-center">Заявка на презентацию</div>
+    <div class="feedback__subtitle">Оставьте заявку на подробную презентацию Service Creatio <br>
+        Мы перезвоним и подготовим персональное предложение
+    </div>
+    <form class="feedback__wrapper form">
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
+               required>
+        <input type="email" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
+               required>
+        <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="Телефон"
+               required>
+        <input type="text" class="form__input feedback__input" name="feedback__company" placeholder="Компания*"
+               required>
+        <input type="number" class="form__input feedback__input" name="feedback__people"
+               placeholder="Количество сотрудников*"
+               required>
+        <textarea name="feedback__comm" class="feedback__comm form__comm" id=""
+                  placeholder="Ваше сообщение"></textarea>
+        <div class="recaptcha feedback__recaptcha">
+            <img src="./assets/img/recaptcha.png" alt="">
+        </div>
+        <div class="confidencial feedback__confidencial">
+            Нажимая на кнопку «Отправить сообщение», вы даёте согласие на <a href="">обработку персональных
+            данных</a>
+        </div>
+        <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+    </form>
+</div>
+<div class="predesign modal" style="display: none;" id="predesign">
+    <div class="title text-center">Заявка на предпроектное обследование</div>
+    <div class="feedback__subtitle">Оставьте заявку на подготовительные работы по вашему проекту <br>
+        Мы обработаем запрос и свяжемся с вами в ближайшее время
+    </div>
+    <form class="feedback__wrapper form">
+        <input type="text" class="form__input feedback__input" name="feedback__name" placeholder="Имя*"
+               required>
+        <input type="text" class="form__input feedback__input" name="feedback__email" placeholder="E-mail"
+               required>
+        <input type="text" class="form__input feedback__input" name="feedback__phone" placeholder="Телефон"
+               required>
+        <textarea name="feedback__comm" class="feedback__comm form__comm" id=""
+                  placeholder="Ваше сообщение"></textarea>
+        <div class="feedback__file-wrapper">
+            <input type="file" name="feed__file" id="feed__file" class="inputfile feedback__file"
+                   data-multiple-caption="{count} files selected" multiple>
+            <label for="feed__file">
+                <svg width="18" height="19" viewBox="0 0 18 19">
+                    <use xlink:href="#input-file"></use>
+                </svg>
+                <span>Прикрепить файл</span></label>
+        </div>
+        <div class="recaptcha feedback__recaptcha">
+            <img src="./assets/img/recaptcha.png" alt="">
+        </div>
+        <div class="confidencial feedback__confidencial">
+            Нажимая на кнопку «Отправить сообщение», вы даёте согласие на <a href="">обработку персональных
+            данных</a>
+        </div>
+        <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+    </form>
+</div>
+<div class="result modal" style="display: none;" id="result">
+    <div class="title text-center">Ваша заявка на презентацию успешно отправлена!</div>
+    <div class="feedback__subtitle">Мы ответим или перезвоним в ближайшее время
+    </div>
+    <svg width="64" height="65" viewBox="0 0 64 65">
+        <use xlink:href="#modal-result"></use>
+    </svg>
 </div>
 <div id="svg-icons" class="svg-icons"></div>
 </body>

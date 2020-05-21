@@ -231,6 +231,7 @@ p
       padding: 5px 30px
       font-family: $medium, serif
       color: $black1
+      text-decoration: none
 .logo
   &__title
     font-size: 13px
@@ -1188,6 +1189,85 @@ p
 .svg-icons
   display: none
 
-
+// modal
+.modal
+  width: 954px
+  max-width: 100%
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 3px
+  overflow: visible
+  .form
+    margin: 0 auto
+  .title
+    margin-bottom: 20px
+  .feedback__subtitle, .confidencial
+    color: $black0
+  .confidencial
+    margin-top: 30px
+  .feedback__recaptcha
+    margin-top: 0
+  .feedback__btn
+    margin-top: 0
+  &__close
+    position: absolute
+    right: 0
+    border: 0
+    background-color: transparent
+    top: -40px
+    color: $white
+    font-family: $bold, serif
+    font-size: 13px
+    letter-spacing: 0.025em
+    display: flex
+    align-items: center
+    transition: $trans
+    cursor: pointer
+    svg
+      margin-left: 12px
+      stroke: $white
+      transition: $trans
+    &:hover
+      color: $red2
+      svg
+        stroke: $red2
+    &:focus, &:active
+      outline: none
+.free
+  margin: 50px 0
+  .feedback__wrapper
+    display: block
+  .feedback__input
+    width: 100%
+    height: 50px
+    margin-bottom: 20px
+.presentation
+  .feedback__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  .feedback__input
+    width: 32%
+    height: 50px
+    margin-bottom: 20px
+    display: inline-block
+    &:nth-child(4), &:nth-child(5)
+      width: 49%
+  .feedback__comm
+    width: 100%
+    height: 135px
+    margin-bottom: 20px
+  .feedback__recaptcha
+    margin: 0 auto
+  .confidencial
+    margin: 20px auto 0
+.predesign
+  margin: 50px 0
+.result
+  svg
+    display: block
+    margin: 0 auto
+.fancybox-bg
+  background: #3D525D
+  
 
 

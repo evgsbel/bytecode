@@ -7,12 +7,16 @@
 
 $(document).ready(function () {
 
+    //ancors
 
-    $('.js-hover-hide-phone').hover(function visibleHidePhone() {
-        $(this).find('.top-contacts__hide').toggleClass('is-visible')
+    $("a.js-ancor-link").click(function () {
+        let elementClick = $(this).attr("href")
+        let destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+        return false;
     });
 
-
+    //SLIDERS
     let arrow_prev = "<svg width='24' height='43' viewBox='0 0 24 43' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M22.5 2L3 21.5L22.5 41' ' stroke-width='3'/></svg>",
         arrow_next = "<svg width='24' height='43' viewBox='0 0 24 43' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 2L21.5 21.5L2 41'  stroke-width='3'/></svg>"
 
@@ -79,94 +83,6 @@ $(() => {
 });
 
 
-$(() => {
-    $(".js-select").select2({
-        language: "ru",
-        minimumResultsForSearch: -1
-    });
-});
-
-function formatState(state) {
-    if (!state.id) {
-        return state.text;
-    }
-
-    let baseUrl = "./assets/img/";
-    let $state = $(
-        '<span class="d-flex align-items-center"><div class="header__currency-img"><img class="" /></div> <span class="header__currency-title"></span></span>'
-    );
-
-    // Use .text() instead of HTML string concatenation to avoid script injection issues
-    $state.find("span").text(state.text);
-    $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
-
-    return $state;
-};
-
-$(".js-select-state").select2({
-    templateSelection: formatState,
-    templateResult: formatState,
-    language: "ru",
-    minimumResultsForSearch: -1,
-    id: "id"
-});
-
-// fix header
-$(function () {
-    $fixBlock = $('.fixed');
-    $fixBlock.css('width', $fixBlock.outerWidth());
-    $window = $(window);
-    // $h = $fixBlock.offset().top;
-    $window.scroll(function () {
-        if ($window.scrollTop() > 180) {
-            $fixBlock.addClass('is-active');
-            $fixBlock.fadeIn()
-        } else {
-            $fixBlock.removeClass('is-active');
-            $fixBlock.fadeOut()
-        }
-    });
-});
-
-$('.js-open-fix-header').click(function openFixHeader() {
-    $(this).toggleClass('is-active');
-    $(this).closest('.fixed').find('.header').slideToggle();
-})
-
-$('[data-fancybox]').fancybox({
-    btnTpl: {
-        smallBtn:
-            '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small modal-form__close" title="{{CLOSE}}">' +
-            '<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"/></svg>' +
-            "</button>"
-    }
-});
-
-// input count
-$(function () {
-
-    (function quantityProducts() {
-        let $quantityArrowMinus = $(".input-count__btn_minus");
-        let $quantityArrowPlus = $(".input-count__btn_plus");
-        let $quantityNum = $(".input-count__input");
-
-        $quantityArrowMinus.click(quantityMinus);
-        $quantityArrowPlus.click(quantityPlus);
-
-        function quantityMinus() {
-            if ($quantityNum.val() > 1) {
-                $quantityNum.val(+$quantityNum.val() - 1);
-            }
-        }
-
-        function quantityPlus() {
-            $quantityNum.val(+$quantityNum.val() + 1);
-        }
-    })();
-
-});
-
-
 //scroll bar
 $('.js-scrollbar').mCustomScrollbar({
     axis: 'y',
@@ -197,6 +113,7 @@ for (let el of tabLinks) {
     });
 }
 
+//checkbox
 $('.js-package__input').change(function () {
     if ($(this).is(':checked')) {
         $(this).parent().removeClass('unchecked');
@@ -224,3 +141,16 @@ Array.prototype.forEach.call(inputs, function (input) {
             label.innerHTML = labelVal;
     });
 });
+
+$('[data-fancybox]').fancybox({
+    btnTpl: {
+        smallBtn:
+            '<button type="button" data-fancybox-close class="modal__close" title="{{CLOSE}}">' + 'закрыть' +
+            '<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+            '<use xlink:href="#modal-close"></use>' +
+            '</svg>' +
+            "</button>"
+    }
+});
+
+
