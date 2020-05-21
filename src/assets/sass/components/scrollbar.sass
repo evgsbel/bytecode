@@ -45,3 +45,38 @@
     background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4 1L7 4' stroke='%23ffffff'/%3E%3C/svg%3E%0A")
 .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown:hover
   background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L4 4L7 1' stroke='%23ffffff'/%3E%3C/svg%3E%0A")
+
+.mCSB_dragger_bar
+  &:before
+    content: ""
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7))
+    height: 50px
+    width: 50px
+    position: absolute
+    top: -60px
+    left: -20px
+    transform: skewX(236deg)
+    -webkit-transition: all 0.1s
+    transition: all 0.1s
+    -webkit-animation-name: slideme
+    animation-name: slideme
+    -webkit-animation-duration: 3s
+    animation-duration: 5s
+    -webkit-animation-delay: 0.05s
+    animation-delay: 0.05s
+    -webkit-animation-timing-function: ease-in-out
+    animation-timing-function: ease-in-out
+    -webkit-animation-iteration-count: infinite
+    animation-iteration-count: infinite
+  &:hover:before
+    -webkit-animation: none
+    -o-animation: none
+    animation: none
+
+@keyframes slideme
+  0%
+    top: -60px
+  100%
+    top: 100%
+
+
