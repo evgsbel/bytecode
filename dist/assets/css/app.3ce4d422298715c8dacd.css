@@ -1789,31 +1789,62 @@ p {
 
 @media (max-width: 1600.98px) {
   .grid-layout {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
-  .container, .package .container {
-    grid-column: 2 / span 8; }
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
   .service__content {
     max-height: 480px; }
   .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
   .platform__item_mobile {
     top: -160vh; }
   .with-work {
     margin-top: 60px; }
   .about {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     margin-top: 60px; }
-    .about__info {
-      grid-column: 2 / 5; }
     .about__img {
-      grid-column: 7 / span 9;
       margin-top: -135px; }
     .about__vector {
-      grid-column: 6 / span 9;
-      top: -488px;
-      left: -266px; }
+      top: -522px; }
   .package__text {
-    height: 215px; } }
+    height: 215px; }
+  .contacts__offices_item:before {
+    left: 31%; }
+  .contacts__offices_adress:before {
+    left: 16%; }
+  .contacts__offices_adress_moscow:before {
+    left: 31%; }
+  .contacts__offices_worktime:before {
+    left: 32%; } }
+
+@media (max-width: 1440.98px) {
+  .grid-layout, .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+  .header__nav_item {
+    padding: 5px 2%; }
+  .help__content {
+    padding-left: 15px; }
+  .help__img {
+    max-width: 250px;
+    padding: 2%; }
+    .help__img svg {
+      max-width: 100%; }
+  .platform__item_desktop {
+    grid-column: 1/12; }
+  .platform__item_tablet {
+    grid-column: 9 / 11;
+    top: -70vh;
+    left: 20vw; }
+  .platform__item_mobile {
+    top: -80vh;
+    grid-column: 12 / 13; }
+  .contacts__offices_item:before {
+    left: 29%; }
+  .contacts__offices_adress:before {
+    left: 12%; }
+  .contacts__offices_adress_moscow:before {
+    left: 29%; }
+  .contacts__offices_worktime:before {
+    left: 32%; } }
 
 
-/*# sourceMappingURL=app.f0a6e32c367f94c6b3a2.css.map*/
+/*# sourceMappingURL=app.3ce4d422298715c8dacd.css.map*/
