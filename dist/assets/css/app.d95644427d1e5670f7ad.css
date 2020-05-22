@@ -2003,5 +2003,9 @@ p {
   .contacts__offices_adress_moscow:before {
     left: 23%; } }
 
+@media (max-width: 768.98px) {
+  .container, .package .container {
+    grid-column: 1 / span 9; } }
 
-/*# sourceMappingURL=app.9cc0d41ee4dbecdf9766.css.map*/
+
+/*# sourceMappingURL=app.d95644427d1e5670f7ad.css.map*/
