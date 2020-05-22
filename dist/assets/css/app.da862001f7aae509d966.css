@@ -1697,6 +1697,15 @@ p {
       padding-bottom: 2em; }
     .footer__nav-link {
       color: #fff; }
+  .footer__bottom {
+    grid-column: 1/13;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 30px; }
+  .footer__logo {
+    margin-right: 25px; }
+    .footer__logo-text {
+      font-size: 13px; }
 
 .svg-icons {
   display: none; }
@@ -1873,4 +1882,4 @@ p {
     padding-left: 30px; } }
 
 
-/*# sourceMappingURL=app.dc2fa9b0a215c0c3865e.css.map*/
+/*# sourceMappingURL=app.da862001f7aae509d966.css.map*/

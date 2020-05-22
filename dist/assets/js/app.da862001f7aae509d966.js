@@ -163,6 +163,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./footer-logo.svg": "./src/assets/img/svg/footer-logo.svg",
 	"./h-01.svg": "./src/assets/img/svg/h-01.svg",
 	"./h-02.svg": "./src/assets/img/svg/h-02.svg",
 	"./h-03.svg": "./src/assets/img/svg/h-03.svg",
@@ -198,6 +199,26 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./src/assets/img/svg sync recursive \\.svg$";
+
+/***/ }),
+
+/***/ "./src/assets/img/svg/footer-logo.svg":
+/*!********************************************!*\
+  !*** ./src/assets/img/svg/footer-logo.svg ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "footer-logo-usage",
+      viewBox: "0 0 213 38",
+      url: __webpack_require__.p + "assets/img/svg/sprite.svg#footer-logo",
+      toString: function () {
+        return this.url;
+      }
+    });
 
 /***/ }),
 
@@ -731,4 +752,4 @@ $('[data-fancybox]').fancybox({
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.dc2fa9b0a215c0c3865e.js.map
+//# sourceMappingURL=app.da862001f7aae509d966.js.map
