@@ -1015,7 +1015,8 @@ p {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: minmax(100px, auto);
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  grid-column: 3 / span 12; }
   .interface__wrapper {
     max-width: 30%; }
     .interface__wrapper p {
@@ -1035,20 +1036,21 @@ p {
       width: 251px; }
 
 .package {
-  grid-column: 1 / span 12;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: minmax(100px, auto);
   padding-bottom: 70px;
+  grid-column: 3 / 13;
   z-index: -1; }
   .package .container {
     padding-top: 70px;
     padding-bottom: 70px;
     background: rgba(255, 255, 255, 0.6);
     -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px); }
+            backdrop-filter: blur(30px);
+    grid-column: 3 / 15; }
   .package__wrapper {
-    grid-column: 2 / 12;
+    grid-column: 3 / 13;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: minmax(100px, auto); }
@@ -1181,7 +1183,7 @@ p {
 .methodology {
   grid-column: 1 / span 16;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: minmax(100px, auto); }
   .methodology__wrapper {
     grid-column-gap: 29px;
@@ -1354,7 +1356,7 @@ p {
 .steps {
   grid-column: 1 / span 16;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: minmax(100px, auto);
   padding-top: 65px; }
   .steps__wrapper {
@@ -1384,7 +1386,7 @@ p {
 .feedback {
   grid-column: 1 / span 16;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: minmax(100px, auto);
   padding-top: 62px;
   padding-bottom: 70px;
@@ -1489,7 +1491,7 @@ p {
 .contacts {
   grid-column: 1 / span 16;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: minmax(100px, auto);
   padding-top: 64px;
   padding-bottom: 70px;
@@ -1788,4 +1790,4 @@ p {
 
 
 
-/*# sourceMappingURL=app.f6214f3334ffd5227a59.css.map*/
+/*# sourceMappingURL=app.664f8cc580149e7a7e54.css.map*/
