@@ -28,7 +28,10 @@
     left: 31%
   .contacts__offices_worktime:before
     left: 32%
-
+  .interface__wrapper
+    max-width: 40%
+  .modal
+    margin: 50px 0
 @media (max-width: 1440.98px)
   .grid-layout, .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr))
@@ -58,6 +61,28 @@
     left: 29%
   .contacts__offices_worktime:before
     left: 32%
+  .package__text
+    height: 255px
+@media (max-width: 1367.98px)
+  .grid-layout, .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer, .about
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr))
+  .container, .package .container
+    grid-column: 2/16
+  .service
+    &__monitor
+      grid-column: 1/11
+    &__content
+      grid-column: 11/16
+  .package__text
+    height: 200px
+  .about__info
+    grid-column: 2 / 8
+  .about__img
+    grid-column: 10 / span 16
+  .about__vector
+    left: -321px
+  .footer__item
+    padding-left: 30px
 
 
 
