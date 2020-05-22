@@ -83,15 +83,7 @@ $(() => {
 });
 
 
-//scroll bar
-$('.js-scrollbar').mCustomScrollbar({
-    axis: 'y',
-    theme: 'dark-thick',
-    scrollInertia: '330',
-    setHeight: 570,
-    scrollButtons: true,
-    scrollButtons: {enable: true}
-});
+
 
 //tabs
 const tabLinks = document.querySelectorAll(".tabs a");
@@ -153,4 +145,37 @@ $('[data-fancybox]').fancybox({
     }
 });
 
+// $(document).ready(function() {
+//   function checkWidth() {
+//     let windowWidth = $('body').innerWidth()
+//     if(windowWidth < 1025){
+//       $('js-scrollbar').mCustomScrollbar("destroy");
+//     }
+//     else{
+//      //scroll bar
+//         $('.js-scrollbar').mCustomScrollbar({
+//             axis: 'y',
+//             theme: 'dark-thick',
+//             scrollInertia: '330',
+//             setHeight: 570,
+//             scrollButtons: true,
+//             scrollButtons: {enable: true}
+//         });
+//     }
+//   }
+//   checkWidth();
+//     $(window).resize(function(){
+//     checkWidth(); // проверит при изменении размера окна клиента
+//   });
+// });
+
+//scroll bar
+$('.js-scrollbar').mCustomScrollbar({
+    axis: 'y',
+    theme: 'dark-thick',
+    scrollInertia: '330',
+    setHeight: 570,
+    scrollButtons: true,
+    scrollButtons: {enable: true}
+});
 

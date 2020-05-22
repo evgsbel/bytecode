@@ -32,6 +32,8 @@
     max-width: 40%
   .modal
     margin: 50px 0
+  .platform__white
+    height: 90%
 @media (max-width: 1440.98px)
   .grid-layout, .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr))
@@ -83,6 +85,128 @@
     left: -321px
   .footer__item
     padding-left: 30px
+  .about__number
+    flex: 0 0 40%
+    max-width: 40%
+@media (max-width: 1280.98px)
+  .grid-layout, .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer, .about
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr))
+  .about__numbers
+    flex-wrap: wrap
+  .about__img
+    grid-column: 8 / span 16
+    margin-top: -100px
+  .footer_left
+    grid-column: 1/6
+  .footer_right
+    grid-column: 10/13
+  .footer_center
+    grid-column: 8/9
+  .footer__social
+    grid-column: 1/13
+  .methodology__bottom-item_orange_1:before
+    left: 15%
+  .methodology__bottom-item_red span
+    left: 3px
+  .methodology__bottom-item_orange_3 span
+    font-size: 13px
+  .methodology__bottom-item span
+    display: flex
+    justify-content: center
+  .header__topbar
+    margin-bottom: 30px
+@media (max-width: 1024.98px)
+  .grid-layout, .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer, .about
+    grid-column: 1/ span 12
+  .container, .package .container
+    grid-column: 2/ 12
+  .header
+    &__topbar
+      grid-template-rows: 65px 30px 50px
+      margin-bottom: 50px
+    &__logo
+      grid-column: 1 / 5
+    &__info_first
+      grid-column: 7 / 12
+      text-align: right
+    &__info_second
+      grid-column: 9 / 12
+      grid-row: 3 / 3
+      order: 3
+      text-align: right
+    &__callback
+      order: 4
+      grid-column: 1 / 5
+      grid-row: 3 / 4
+    &__icon_worktime:before,  .header__icon_adress:before
+      left: 10px
+    &__icon_phone:before, .header__icon_email:before
+      left: -20px
+    &__content_wrapper
+      grid-column: 2/12
+      margin-bottom: 30px
+    &__video
+      grid-column: 2/12
+      margin-left: 0
+    &__nav_item
+      padding: 5px 1%
+  .service
+    grid-column: 1 / span 12
+    grid-template-columns: repeat(12, 1fr)
+    &__monitor
+      grid-column: 1/12
+    &__content
+      grid-column: 2/12
+      max-height: 270px
+      order: -1
+    &__title
+      grid-column: 2 / span 5
+      margin-left: 0
+      margin-top: 20px
+      height: 100px
+    &__white
+      grid-column: 1/span 12
+  .help__items
+    grid-template-columns: repeat(1, 1fr)
+  .help__img
+    max-width: 100%
+  .platform
+    max-height: 750px
+    &__white
+      height: 95%
+    &__content
+      grid-template-columns: repeat(12, 1fr)
+    &__item_desktop
+      grid-column: 1/9
+    .platform__item_tablet
+      grid-column: 7/ span 12
+      top: -45vh
+      left: -10vw
+    .platform__item_mobile
+      top: -100vh
+      left: 0
+      grid-column: 10/ span 12
+  .soft:before
+    top: -700px
+  .mockup
+    background-position: 0 6%
+  .package__item_left
+    grid-column: 1/7
+  .package__item_right
+    grid-column: 7/span 12
+  .feedback__wrapper
+    margin: 0
+  .with-work .soft__item
+    padding: 10px
+  .footer_left
+    grid-column: 1/7
+  .contacts__offices_item:before
+    left: 25%
+  .contacts__offices_adress:before
+    left: 0%
+  .contacts__offices_adress_moscow:before
+    left: 23%
+
 
 
 
