@@ -731,4 +731,4 @@ $('[data-fancybox]').fancybox({
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.664f8cc580149e7a7e54.js.map
+//# sourceMappingURL=app.2dc14e22768e7d1fab7b.js.map
