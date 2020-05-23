@@ -7,12 +7,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Bytecode</title>
-<link href="assets/css/vendors.d95644427d1e5670f7ad.css" rel="stylesheet"><link href="assets/css/app.d95644427d1e5670f7ad.css" rel="stylesheet"></head>
+<link href="assets/css/vendors.a4e77c61e041264d75d7.css" rel="stylesheet"><link href="assets/css/app.a4e77c61e041264d75d7.css" rel="stylesheet"></head>
 <body>
+<div class="preloader__wrp">
+    <div class="cssload-loader">
+        <div class="cssload-inner cssload-one"></div>
+        <div class="cssload-inner cssload-two"></div>
+        <div class="cssload-inner cssload-three"></div>
+    </div>
+</div>
 <div class="grid-layout">
     <div class="header-design"></div>
     <div class="container top-container">
         <header class="header">
+            <!--only mobile -->
+            <div class="header-mobile">
+                <div class="header-mobile__logo">
+                    <svg height="47" width="224" viewBox="0 0 224 47" class="icon">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                    <div class="logo__title header-mobile__logo-title">Внедрение BPM и CRM решений</div>
+                </div>
+                <button class="hamburger header-mobile__btn js-header__menu-btn">
+                    <svg width="22" height="19" viewBox="0 0 22 19" class="hamburger_open">
+                        <use xlink:href="#hamburger-open"></use>
+                    </svg>
+                    <svg width="18" height="18" viewBox="0 0 18 18" class="hamburger_close">
+                        <use xlink:href="#hamburger-close"></use>
+                    </svg>
+                </button>
+                <div class="header-mobile__content">
+                    <div class="header-mobile__contacts">
+                        <div class="div header__info-adress header__icon header__icon_adress"><span>Адрес:</span>
+                            Москва,
+                            ул.
+                            Казакова, д. 8, стр. 2
+                        </div>
+                        <div class="header__info-timework header__icon header__icon_worktime"><span>Режим работы:</span>
+                            пн-пт с
+                            9 до 18 по мск
+                        </div>
+                        <a href="tel:84954814696" class="header__info-phone header__icon header__icon_phone">8 495
+                            481-46-96</a>
+                        <a href="mailto:sales@bytecodecrm.ru"
+                           class="header__info-email header__icon header__icon_email">sales@bytecodecrm.ru</a>
+                        <a href="#callback" class="header-mobile__callback btn btn_red" data-fancybox="">Задать
+                            вопрос</a>
+                    </div>
+                    <div class="header-mobile__nav">
+                        <a href="#service" class="header__nav_item btn js-ancor-link">Возможности</a>
+                        <a href="#advantages" class="header__nav_item btn js-ancor-link">Преимущества</a>
+                        <a href="#packages" class="header__nav_item btn js-ancor-link">Стоимость</a>
+                        <a href="#methodology" class="header__nav_item btn js-ancor-link">Внедрение</a>
+                        <a href="#clients" class="header__nav_item btn js-ancor-link">Клиенты</a>
+                        <a href="#about" class="header__nav_item btn js-ancor-link">О компании</a>
+                        <a href="#contacts" class="header__nav_item btn js-ancor-link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            <!--only mobile-->
             <div class="header__topbar">
                 <div class="logo header__logo">
                     <svg height="47" width="224" viewBox="0 0 224 47" class="icon">
@@ -77,7 +130,7 @@
         <div class="service__title">
             Service Creatio
         </div>
-        <div class="service__monitor tabs-content">
+        <div class="service__monitor tabs-content js-service-slider-top owl-carousel owl-theme">
             <div class="tabs-panel is-active" data-index="0"><img src="./assets/img/s-00.png" alt=""></div>
             <div class="tabs-panel" data-index="1"><img src="./assets/img/s-01.png" alt=""></div>
             <div class="tabs-panel" data-index="2"><img src="./assets/img/s-02.png" alt=""></div>
@@ -99,7 +152,8 @@
             <div class="tabs-panel" data-index="18"><img src="./assets/img/s-08.png" alt=""></div>
             <div class="tabs-panel" data-index="19"><img src="./assets/img/s-09.png" alt=""></div>
         </div>
-        <div class="service__content js-scrollbar tabs" data-mcs-theme="dark-thick">
+        <div class="service__content js-scrollbar tabs js-service-slider-bottom owl-carousel owl-theme"
+             data-mcs-theme="dark-thick">
             <div class="is-active service__content-item">
                 <a href="" class="service__content-title">
                     Омниканальные коммуникации
@@ -535,12 +589,17 @@
                 </div>
             </div>
         </section>
+        <!--only mobile-->
+        <section class="mockup__mobile">
+            <img src="./assets/img/mockup2.png" alt="">
+        </section>
+        <!--only mobile-->
         <section class="package" id="packages">
             <div class="container">
                 <div class="title text-center">Выберите пакет Service Creatio <br>для автоматизации процессов <br>
                     управления IT и сервисным обслуживанием
                 </div>
-                <div class="package__wrapper">
+                <div class="package__wrapper js-packages-slider owl-carousel owl-theme">
                     <div class="package__item package__item_left">
                         <div class="package__bg" style="background-image: url('./assets/img/package-01.png');">
                             CUSTOMER <br> CENTER
@@ -659,7 +718,7 @@
                 Процесс планирования, разработки и внедрения максимально упрощен и стандартизирован, чтобы позволяет
                 реализовать проект качественно и в срок.
                 После сдачи проекта консультант по внедрению проведет групповое обучение для ваших сотрудников.</p>
-            <div class="methodology__wrapper">
+            <div class="methodology__wrapper js-methodology-slider owl-carousel owl-theme">
                 <div class="methodology__column">
                     <div class="methodology__top-item methodology__top-item_green">Initiation</div>
                     <div class="methodology__bottom-items">
@@ -669,6 +728,15 @@
                         <div class="methodology__bottom-item methodology__bottom-item_rotate methodology__bottom-item_green">
                             <span>Договор</span></div>
                     </div>
+                    <!--only-mobile-->
+                    <div class="steps__item steps__item_mobile">
+                        <div class="steps__number">1</div>
+                        <div class="steps__text"><span>На первом этапе эксперты ByteCode вместе с вами
+составят календарный план проекта,</span> сформируют
+                            концепцию проекта, детализируют цели и задачи.
+                        </div>
+                    </div>
+                    <!--only-mobile-->
                 </div>
                 <div class="methodology__column">
                     <div class="methodology__top-item methodology__top-item_grey">Elaboration</div>
@@ -678,6 +746,16 @@
                         <div class="methodology__bottom-item methodology__bottom-item_rotate methodology__bottom-item_grey">
                             <span>Концепция</span></div>
                     </div>
+                    <!--only-mobile-->
+                    <div class="steps__item steps__item_mobile">
+                        <div class="steps__number">2</div>
+                        <div class="steps__text"><span>Далее рабочая группа протестирует всю
+функциональность системы.</span> Ваши сотрудники пройдут
+                            обучение по работе в системе, и вы получаете продукт,
+                            уже полностью готовый к использованию.
+                        </div>
+                    </div>
+                    <!--only-mobile-->
                 </div>
                 <div class="methodology__column">
                     <div class="methodology__top-item methodology__top-item_orange">Execution</div>
@@ -698,6 +776,17 @@
                             <span>Тестирование клиентом</span>
                         </div>
                     </div>
+                    <!--only-mobile-->
+                    <div class="steps__item steps__item_mobile">
+                        <div class="steps__number">3</div>
+                        <div class="steps__text"><span>Продукты Creatio передаются клиенту несколькими
+поставками —</span> отдельными функциональными блоками,
+                            готовыми к использованию. Каждая поставка включает
+                            техническое задание, работы по адаптации системы и
+                            тестирование функциональности рабочей группой.
+                        </div>
+                    </div>
+                    <!--only-mobile-->
                 </div>
                 <div class="methodology__column">
                     <div class="methodology__top-item methodology__top-item_red">Transition</div>
@@ -712,6 +801,17 @@
                             <span>Опытная - промышленная <br>эксплуатация</span>
                         </div>
                     </div>
+                    <!--only-mobile-->
+                    <div class="steps__item steps__item_mobile">
+                        <div class="steps__number">4</div>
+                        <div class="steps__text"><span>Вы подведете итоги и результаты проекта,</span> подпишете
+                            акты выполненных работ.
+                            А эксперты ByteCode проведут опрос
+                            удовлетворенности и активируют поддержку
+                            проектного решения.
+                        </div>
+                    </div>
+                    <!--only-mobile-->
                 </div>
                 <div class="methodology__column">
                     <div class="methodology__top-item methodology__top-item_black">Operation</div>
@@ -726,6 +826,17 @@
                             <span>Закрытие проекта <br>+ Lessons Learnt <br>Analysis</span>
                         </div>
                     </div>
+                    <!--only-mobile-->
+                    <div class="steps__item steps__item_mobile">
+                        <div class="steps__number">5</div>
+                        <div class="steps__text"><span>Продукты Creatio передаются клиенту несколькими
+поставками — </span>отдельными функциональными блоками,
+                            готовыми к использованию. Каждая поставка включает
+                            техническое задание, работы по адаптации системы и
+                            тестирование функциональности рабочей группой.
+                        </div>
+                    </div>
+                      <!--only-mobile-->
                 </div>
             </div>
         </div>
@@ -800,7 +911,7 @@
                        required>
                 <input type="text" class="form__input feedback__input" name="feedback__phone" placeholder="Телефон"
                        required>
-                <textarea name="feedback__comm" class="feedback__comm form__comm" id=""
+                <textarea name="feedback__comm" class="feedback__comm form__comm"
                           placeholder="Ваше сообщение"></textarea>
                 <div class="feedback__file-wrapper">
                     <input type="file" name="feed__file" id="feed__file" class="inputfile feedback__file"
@@ -824,7 +935,7 @@
     </section>
     <section class="about" id="about">
         <div class="about__info">
-            <div class="title">О компании</div>
+            <div class="title only-desktop">О компании</div>
             <p><b>ByteCode — команда профессионалов</b>, которая занимается проектами внедрения CRM-систем на платформе
                 Creatio на рынке СНГ. Главная цель компании — получение каждым клиентом нашей компании максимальной
                 выгоды от использования системы за минимальные сроки.</p>
@@ -849,6 +960,7 @@
         </div>
         <div class="about__vector"></div>
         <div class="about__img">
+             <div class="title only-mobile">О компании</div>
             <img src="./assets/img/about.png" alt="">
         </div>
     </section>
@@ -1079,7 +1191,7 @@
                required>
         <input type="tel" class="form__input feedback__input" name="feedback__phone" placeholder="Телефон"
                required>
-        <textarea name="feedback__comm" class="feedback__comm form__comm" id=""
+        <textarea name="feedback__comm" class="feedback__comm form__comm"
                   placeholder="Ваше сообщение"></textarea>
         <div class="recaptcha feedback__recaptcha">
             <img src="./assets/img/recaptcha.png" alt="">
@@ -1108,7 +1220,7 @@
         <input type="number" class="form__input feedback__input" name="feedback__people"
                placeholder="Количество сотрудников*"
                required>
-        <textarea name="feedback__comm" class="feedback__comm form__comm" id=""
+        <textarea name="feedback__comm" class="feedback__comm form__comm"
                   placeholder="Ваше сообщение"></textarea>
         <div class="recaptcha feedback__recaptcha">
             <img src="./assets/img/recaptcha.png" alt="">
@@ -1132,7 +1244,7 @@
                required>
         <input type="text" class="form__input feedback__input" name="feedback__phone" placeholder="Телефон"
                required>
-        <textarea name="feedback__comm" class="feedback__comm form__comm" id=""
+        <textarea name="feedback__comm" class="feedback__comm form__comm"
                   placeholder="Ваше сообщение"></textarea>
         <div class="feedback__file-wrapper">
             <input type="file" name="feed__file" id="feed__file" class="inputfile feedback__file"
@@ -1162,7 +1274,7 @@
     </svg>
 </div>
 <div id="svg-icons" class="svg-icons"></div>
-<script src="assets/js/vendors.d95644427d1e5670f7ad.js"></script><script src="assets/js/app.d95644427d1e5670f7ad.js"></script></body>
+<script src="assets/js/vendors.a4e77c61e041264d75d7.js"></script><script src="assets/js/app.a4e77c61e041264d75d7.js"></script></body>
 </html>
 
 

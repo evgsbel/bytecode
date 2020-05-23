@@ -138,9 +138,9 @@
       order: 4
       grid-column: 1 / 5
       grid-row: 3 / 4
-    &__icon_worktime:before,  .header__icon_adress:before
+    &__icon_worktime:before,  &__icon_adress:before
       left: 10px
-    &__icon_phone:before, .header__icon_email:before
+    &__icon_phone:before, &__icon_email:before
       left: -20px
     &__content_wrapper
       grid-column: 2/12
@@ -207,8 +207,152 @@
   .contacts__offices_adress_moscow:before
     left: 23%
 @media (max-width: 768.98px)
+  .grid-layout, .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer, .about
+    grid-column: 1/ span 9
   .container, .package .container
+    grid-column: 2/9
+  .top-container
+    grid-column: 1/span 9
+  .header
+    padding-top: 0
+    &-design:after, &-design:before
+      content: none
+    &__topbar
+      display: none
+    &__nav
+      display: none
+    &__content
+      padding-top: 150px
+      grid-column: 2/9
+      grid-template-columns: repeat(9, 1fr)
+    &__content_wrapper
+      grid-column: 1/ span 9
+      grid-template-columns: repeat(9, 1fr)
+    &__title,  &__subtitle, &__video
+      grid-column: 2/9
+      padding-left: 0
+  .header-mobile
+    display: grid
+  .service
     grid-column: 1 / span 9
+    grid-template-columns: repeat(9, 1fr)
+    &__content
+      order: 1
+      height: 100%
+      grid-column: 1/span 9
+      .synced
+        display: grid
+        grid-template-columns: repeat(9, 1fr)
+      &-item
+        grid-column: 2/9
+    &__title
+      grid-column: 1 / span 5
+      &:after
+        width: 40%
+    &__monitor
+      margin-left: 0
+      grid-column: 1/span 9
+  .help
+    &:after
+      top: -580px
+      right: 0
+  .platform .platform__item_mobile
+      top: -75vh
+  .interface
+    padding-bottom: 0
+    &__wrapper
+      max-width: 100%
+  .mockup
+    background-image: none
+    &__mobile
+      display: grid
+  .package
+    &__item_left
+      margin-right: 0
+    &__item_right
+      margin-left: 0
+    &__text
+      height: auto
+  .methodology
+    &__wrapper
+      max-width: 80%
+      margin: 30px auto 0
+    &__top-item:before,  &__top-item:after
+      content: none
+    &__bottom-item_orange_1:before
+      left: 55px
+    &__bottom-item_red span
+      left: 35%
+  .steps
+    display: none
+    &__item
+      &_mobile
+        display: flex
+        margin-top: 20px
+  .feedback
+    -webkit-background-size: cover
+    background-size: cover
+    &__wrapper
+      grid-column: 2 / span 9
+      grid-template-rows: repeat(3, 50px)  135px 50px
+    &__input
+      grid-column: 1/span 3
+  .about
+    justify-items: center
+    &__info
+      grid-column: 2/9
+    &__numbers
+      text-align: center
+    &__number
+      margin: 0 auto 15px
+    &__img
+      grid-column: 1/span 9
+      order: -1
+      margin-top: 0
+  .only-desktop
+    display: none
+  .only-mobile
+    display: block
+  .soft__wrapper
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+  .contacts
+    &__wrapper
+      grid-template-columns: repeat(1, 1fr)
+    &__offices_item:before
+      left: 31%
+    &__offices_adress:before
+      left: 16%
+    &__offices_adress_moscow:before
+      left: 31%
+    &__offices_worktime:before
+      left: 32%
+  .footer
+    &_left
+      grid-column: 1/9
+    &_center
+      grid-column: 1/4
+    &_right
+      grid-column: 5/ span 9
+    &__social
+      grid-column: 1/9
+    &__social-wrapper
+      justify-content: flex-start
+    &__social-title
+      text-align: left
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,89 +1,30 @@
-// // $(() => {
-// //     $(window).on('load', function () {
-// //         $('.preloader__wrp').fadeOut();
-// //     });
-// // });
+//preloader
+$(() => {
+    $(window).on('load', function () {
+        $('.preloader__wrp').fadeOut();
+    });
+});
 
+//sliders arrow
+let arrow_next = "<svg width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 2L11.5 11.5L2 21' stroke-width='3'/></svg>",
+    arrow_prev = "<svg width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12 2L2.5 11.5L12 21' stroke-width='3'/></svg>"
 
-$(document).ready(function () {
-
+$(() => {
     //ancors
-
     $("a.js-ancor-link").click(function () {
         let elementClick = $(this).attr("href")
         let destination = $(elementClick).offset().top;
         jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
         return false;
     });
-
-    //SLIDERS
-    let arrow_prev = "<svg width='24' height='43' viewBox='0 0 24 43' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M22.5 2L3 21.5L22.5 41' ' stroke-width='3'/></svg>",
-        arrow_next = "<svg width='24' height='43' viewBox='0 0 24 43' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 2L21.5 21.5L2 41'  stroke-width='3'/></svg>"
-
-    // js-banner-slider
-    $('.js-slider-banner').owlCarousel({
-        items: 1,
-        loop: true,
-        dots: true,
-        nav: true,
-        navText: [arrow_prev, arrow_next],
-        navClass: ["slider-arrow slider-arrow_prev", "slider-arrow slider-arrow_next"],
-        navContainerClass: 'slider-arrow__wrp',
-        dotsClass: 'dots',
-        dotClass: 'dots__item'
-    });
-
-    // main product slider
-    $('.js-slider-product').owlCarousel({
-        loop: true,
-        margin: 20,
-        dots: false,
-        nav: true,
-        navText: [arrow_prev, arrow_next],
-        navClass: ["slider-arrow slider-arrow_prev slider-arrow_blue", "slider-arrow slider-arrow_next slider-arrow_blue"],
-        navContainerClass: 'slider-arrow__wrp',
-        responsive: {
-            0: {
-                items: 1,
-                margin: 0
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            },
-            1200: {
-                items: 4
-            }
-        }
-    });
-
-    // js-banner-slider
-    $('.js-mobile-news-slider').owlCarousel({
-        items: 1,
-        loop: true,
-        dots: false,
-        nav: true,
-        navText: [arrow_prev, arrow_next],
-        navClass: ["slider-arrow slider-arrow_prev slider-arrow_blue", "slider-arrow slider-arrow_next slider-arrow_blue"],
-        navContainerClass: 'mobile-news__arrow-wrp slider-arrow__wrp',
-    });
-
 });
 
 $(() => {
-    $('.hamburger').on('click', function headerHambClick() {
-        $(this).toggleClass('is-active')
-        $('.mobile-hide')
-            .toggleClass('is-open')
-            .slideToggle();
-        //     .removeClass('feed-open');
+    $('.js-header__menu-btn').on('click', function headerHambClick() {
+        $('body')
+            .toggleClass('menu-open');
     });
 });
-
-
-
 
 //tabs
 const tabLinks = document.querySelectorAll(".tabs a");
@@ -145,37 +86,146 @@ $('[data-fancybox]').fancybox({
     }
 });
 
-// $(document).ready(function() {
-//   function checkWidth() {
-//     let windowWidth = $('body').innerWidth()
-//     if(windowWidth < 1025){
-//       $('js-scrollbar').mCustomScrollbar("destroy");
-//     }
-//     else{
-//      //scroll bar
-//         $('.js-scrollbar').mCustomScrollbar({
-//             axis: 'y',
-//             theme: 'dark-thick',
-//             scrollInertia: '330',
-//             setHeight: 570,
-//             scrollButtons: true,
-//             scrollButtons: {enable: true}
-//         });
-//     }
-//   }
-//   checkWidth();
-//     $(window).resize(function(){
-//     checkWidth(); // проверит при изменении размера окна клиента
-//   });
-// });
+$(() => {
+    function checkWidth() {
+        let windowWidth = $('body').innerWidth()
+        if (windowWidth < 769) {
+            //remove scrollbar on mobile
+            $('js-scrollbar').mCustomScrollbar("destroy");
+            //service slider
+            const sync1 = $('.js-service-slider-top');
+            const sync2 = $('.js-service-slider-bottom');
+
+            const thumbnailItemClass = '.owl-item';
+
+            function syncPosition(el) {
+                const $owlSlider = $(this).data('owl.carousel');
+                const {loop} = $owlSlider.options;
+
+                let current = el.item.index;
+                if (loop) {
+                    const count = el.item.count - 1;
+                    current = Math.round(el.item.index - (el.item.count / 2) - 0.5);
+                    if (current < 0) {
+                        current = count;
+                    }
+                    if (current > count) {
+                        current = 0;
+                    }
+                }
+
+                const owlThumbnail = sync2.data('owl.carousel');
+                const itemClass = `.${owlThumbnail.options.itemClass}`;
+
+                const thumbnailCurrentItem = sync2
+                    .find(itemClass)
+                    .removeClass('synced')
+                    .eq(current);
+
+                thumbnailCurrentItem.addClass('synced');
+                if (!thumbnailCurrentItem.hasClass('active')) {
+                    const duration = 300;
+                    sync2.trigger('to.owl.carousel', [current, duration, true]);
+                }
+            }
+
+            sync1.owlCarousel({
+                startPosition: 0,
+                items: 1,
+                loop: false,
+                margin: 10,
+                nav: false,
+                dots: false,
+                animateOut: 'fadeOut',
+                smartSpeed: 500,
+                autoplay: false,
+                autoplayTimeout: 6000,
+                autoplayHoverPause: false,
+            }).on('changed.owl.carousel', syncPosition);
+            sync2.owlCarousel({
+                startPosition: 0,
+                items: 1,
+                loop: false,
+                margin: 15,
+                autoplay: false,
+                nav: true,
+                navText: [arrow_prev, arrow_next],
+                navClass: ["slider-arrow slider-arrow_prev slider-arrow_red", "slider-arrow slider-arrow_next slider-arrow_red"],
+                navContainerClass: 'slider-arrow__wrp',
+                dots: false,
+                onInitialized(e) {
+                    // eslint-disable-next-line no-underscore-dangle
+                    const thumbnailCurrentItem = $(e.target).find(thumbnailItemClass).eq(this._current);
+                    thumbnailCurrentItem.addClass('synced');
+                },
+            }).on('click', thumbnailItemClass, (e) => {
+                e.preventDefault();
+                const duration = 10000;
+                const itemIndex = $(e.target).parents(thumbnailItemClass).index();
+                sync1.trigger('to.owl.carousel', [itemIndex, duration, true]);
+            }).on('changed.owl.carousel', (el) => {
+                const number = el.item.index;
+                const $owlSlider = sync1.data('owl.carousel');
+                $owlSlider.to(number, 100, true);
+            });
+            $('.service__monitor').find('.tabs-panel').removeClass('tabs-panel');
+            $('.js-packages-slider').owlCarousel({
+                loop: true,
+                items: 1,
+                nav: true,
+                nav: true,
+                navText: [arrow_prev, arrow_next],
+                navClass: ["slider-arrow slider-arrow_prev slider-arrow_white", "slider-arrow slider-arrow_next slider-arrow_white"],
+                navContainerClass: 'slider-arrow__wrp  slider-arrow__wrp_packages',
+                dots: false,
+            });
+            $('.js-methodology-slider').owlCarousel({
+                loop: false,
+                items: 1,
+                margin: 10,
+                nav: true,
+                navText: [arrow_prev, arrow_next],
+                navClass: ["slider-arrow slider-arrow_prev slider-arrow_prev_methodology slider-arrow_red", "slider-arrow slider-arrow_next slider-arrow_red slider-arrow_next_methodology"],
+                navContainerClass: 'slider-arrow__wrp slider-arrow__wrp_methodology',
+                dots: false,
+            });
+
+
+        } else {
+            //scroll bar
+            $('.js-scrollbar').mCustomScrollbar({
+                axis: 'y',
+                theme: 'dark-thick',
+                scrollInertia: '330',
+                setHeight: 570,
+                scrollButtons: true,
+                scrollButtons: {enable: true}
+            });
+            //remove slider on desktop
+            $('.js-service-slider-top').trigger('destroy.owl.carousel').removeClass('js-service-slider-top owl-carousel owl-theme');
+            $('.js-service-slider-bottom').trigger('destroy.owl.carousel').removeClass('js-service-slider-bottom owl-carousel owl-theme');
+            $('.js-packages-slider').trigger('destroy.owl.carousel').removeClass('js-packages-slider owl-carousel owl-theme');
+
+        }
+    }
+
+    checkWidth();
+    $(window).resize(function () {
+        checkWidth(); // проверит при изменении размера окна клиента
+    });
+});
 
 //scroll bar
-$('.js-scrollbar').mCustomScrollbar({
-    axis: 'y',
-    theme: 'dark-thick',
-    scrollInertia: '330',
-    setHeight: 570,
-    scrollButtons: true,
-    scrollButtons: {enable: true}
+// $('.js-scrollbar').mCustomScrollbar({
+//     axis: 'y',
+//     theme: 'dark-thick',
+//     scrollInertia: '330',
+//     setHeight: 570,
+//     scrollButtons: true,
+//     scrollButtons: {enable: true}
+// });
+
+$(() => {
+
 });
 

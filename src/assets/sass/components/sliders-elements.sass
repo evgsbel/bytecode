@@ -10,49 +10,33 @@
     stroke: #000
   &:focus,&active
     outline: none
+  &.disabled
+    svg
+      stroke: #C4C4C4
   &__wrp
     position: absolute
-    top: 45%
-    width: 1400px
+    top: 0%
+    width: 1440px
     max-width: 100%
     left: 0
     right: 0
     margin: 0 auto
-  &_blue
+    &_packages
+      top: 5%
+    &_methodology
+      top: 4%
+  &_red
     svg
-      stroke: $blue
+      stroke: $red2
+  &_white
+    svg
+      stroke: $white
+      stroke-width: 3px
   &_prev
-    left: 0
+    left: 20px
+    &_methodology
+      left: -50px
   &_next
-    right: 0
-
-//dots
-
-.dots
-  position: absolute
-  left: 0
-  right: 0
-  margin: 0 auto
-  bottom: 40px
-  width: 1400px
-  max-width: 100%
-  text-align: center
-  &__item
-    background: none
-    border: 0
-    span
-      width: 15px
-      height: 15px
-      border: 0
-      background-color: #fff
-      -webkit-border-radius: 50%
-      -moz-border-radius: 50%
-      border-radius: 50%
-      transition: $trans
-      display: block
-      &:hover
-        width: 9px
-        height: 9px
-    &.active span
-      width: 9px
-      height: 9px
+    right: 20px
+    &_methodology
+      right: -50px

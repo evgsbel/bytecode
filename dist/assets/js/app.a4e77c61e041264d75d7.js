@@ -168,6 +168,8 @@ var map = {
 	"./h-02.svg": "./src/assets/img/svg/h-02.svg",
 	"./h-03.svg": "./src/assets/img/svg/h-03.svg",
 	"./h-04.svg": "./src/assets/img/svg/h-04.svg",
+	"./hamburger-close.svg": "./src/assets/img/svg/hamburger-close.svg",
+	"./hamburger-open.svg": "./src/assets/img/svg/hamburger-open.svg",
 	"./input-file.svg": "./src/assets/img/svg/input-file.svg",
 	"./logo.svg": "./src/assets/img/svg/logo.svg",
 	"./modal-close.svg": "./src/assets/img/svg/modal-close.svg",
@@ -295,6 +297,46 @@ __webpack_require__.r(__webpack_exports__);
       id: "h-04-usage",
       viewBox: "0 0 297 236",
       url: __webpack_require__.p + "assets/img/svg/sprite.svg#h-04",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/assets/img/svg/hamburger-close.svg":
+/*!************************************************!*\
+  !*** ./src/assets/img/svg/hamburger-close.svg ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "hamburger-close-usage",
+      viewBox: "0 0 18 18",
+      url: __webpack_require__.p + "assets/img/svg/sprite.svg#hamburger-close",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/assets/img/svg/hamburger-open.svg":
+/*!***********************************************!*\
+  !*** ./src/assets/img/svg/hamburger-open.svg ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "hamburger-open-usage",
+      viewBox: "0 0 22 19",
+      url: __webpack_require__.p + "assets/img/svg/sprite.svg#hamburger-open",
       toString: function () {
         return this.url;
       }
@@ -603,12 +645,16 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-// // $(() => {
-// //     $(window).on('load', function () {
-// //         $('.preloader__wrp').fadeOut();
-// //     });
-// // });
-$(document).ready(function () {
+//preloader
+$(function () {
+  $(window).on('load', function () {
+    $('.preloader__wrp').fadeOut();
+  });
+}); //sliders arrow
+
+var arrow_next = "<svg width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 2L11.5 11.5L2 21' stroke-width='3'/></svg>",
+    arrow_prev = "<svg width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12 2L2.5 11.5L12 21' stroke-width='3'/></svg>";
+$(function () {
   //ancors
   $("a.js-ancor-link").click(function () {
     var elementClick = $(this).attr("href");
@@ -617,62 +663,11 @@ $(document).ready(function () {
       scrollTop: destination
     }, 800);
     return false;
-  }); //SLIDERS
-
-  var arrow_prev = "<svg width='24' height='43' viewBox='0 0 24 43' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M22.5 2L3 21.5L22.5 41' ' stroke-width='3'/></svg>",
-      arrow_next = "<svg width='24' height='43' viewBox='0 0 24 43' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 2L21.5 21.5L2 41'  stroke-width='3'/></svg>"; // js-banner-slider
-
-  $('.js-slider-banner').owlCarousel({
-    items: 1,
-    loop: true,
-    dots: true,
-    nav: true,
-    navText: [arrow_prev, arrow_next],
-    navClass: ["slider-arrow slider-arrow_prev", "slider-arrow slider-arrow_next"],
-    navContainerClass: 'slider-arrow__wrp',
-    dotsClass: 'dots',
-    dotClass: 'dots__item'
-  }); // main product slider
-
-  $('.js-slider-product').owlCarousel({
-    loop: true,
-    margin: 20,
-    dots: false,
-    nav: true,
-    navText: [arrow_prev, arrow_next],
-    navClass: ["slider-arrow slider-arrow_prev slider-arrow_blue", "slider-arrow slider-arrow_next slider-arrow_blue"],
-    navContainerClass: 'slider-arrow__wrp',
-    responsive: {
-      0: {
-        items: 1,
-        margin: 0
-      },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 3
-      },
-      1200: {
-        items: 4
-      }
-    }
-  }); // js-banner-slider
-
-  $('.js-mobile-news-slider').owlCarousel({
-    items: 1,
-    loop: true,
-    dots: false,
-    nav: true,
-    navText: [arrow_prev, arrow_next],
-    navClass: ["slider-arrow slider-arrow_prev slider-arrow_blue", "slider-arrow slider-arrow_next slider-arrow_blue"],
-    navContainerClass: 'mobile-news__arrow-wrp slider-arrow__wrp'
   });
 });
 $(function () {
-  $('.hamburger').on('click', function headerHambClick() {
-    $(this).toggleClass('is-active');
-    $('.mobile-hide').toggleClass('is-open').slideToggle(); //     .removeClass('feed-open');
+  $('.js-header__menu-btn').on('click', function headerHambClick() {
+    $('body').toggleClass('menu-open');
   });
 }); //tabs
 
@@ -736,43 +731,141 @@ $('[data-fancybox]').fancybox({
   btnTpl: {
     smallBtn: '<button type="button" data-fancybox-close class="modal__close" title="{{CLOSE}}">' + 'закрыть' + '<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">' + '<use xlink:href="#modal-close"></use>' + '</svg>' + "</button>"
   }
-}); // $(document).ready(function() {
-//   function checkWidth() {
-//     let windowWidth = $('body').innerWidth()
-//     if(windowWidth < 1025){
-//       $('js-scrollbar').mCustomScrollbar("destroy");
-//     }
-//     else{
-//      //scroll bar
-//         $('.js-scrollbar').mCustomScrollbar({
-//             axis: 'y',
-//             theme: 'dark-thick',
-//             scrollInertia: '330',
-//             setHeight: 570,
-//             scrollButtons: true,
-//             scrollButtons: {enable: true}
-//         });
-//     }
-//   }
-//   checkWidth();
-//     $(window).resize(function(){
-//     checkWidth(); // проверит при изменении размера окна клиента
-//   });
-// });
-//scroll bar
+});
+$(function () {
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth();
 
-$('.js-scrollbar').mCustomScrollbar(_defineProperty({
-  axis: 'y',
-  theme: 'dark-thick',
-  scrollInertia: '330',
-  setHeight: 570,
-  scrollButtons: true
-}, "scrollButtons", {
-  enable: true
-}));
+    if (windowWidth < 769) {
+      var _$$owlCarousel;
+
+      //remove scrollbar on mobile
+      $('js-scrollbar').mCustomScrollbar("destroy"); //service slider
+
+      var sync1 = $('.js-service-slider-top');
+      var sync2 = $('.js-service-slider-bottom');
+      var thumbnailItemClass = '.owl-item';
+
+      function syncPosition(el) {
+        var $owlSlider = $(this).data('owl.carousel');
+        var loop = $owlSlider.options.loop;
+        var current = el.item.index;
+
+        if (loop) {
+          var count = el.item.count - 1;
+          current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+
+          if (current < 0) {
+            current = count;
+          }
+
+          if (current > count) {
+            current = 0;
+          }
+        }
+
+        var owlThumbnail = sync2.data('owl.carousel');
+        var itemClass = ".".concat(owlThumbnail.options.itemClass);
+        var thumbnailCurrentItem = sync2.find(itemClass).removeClass('synced').eq(current);
+        thumbnailCurrentItem.addClass('synced');
+
+        if (!thumbnailCurrentItem.hasClass('active')) {
+          var duration = 300;
+          sync2.trigger('to.owl.carousel', [current, duration, true]);
+        }
+      }
+
+      sync1.owlCarousel({
+        startPosition: 0,
+        items: 1,
+        loop: false,
+        margin: 10,
+        nav: false,
+        dots: false,
+        animateOut: 'fadeOut',
+        smartSpeed: 500,
+        autoplay: false,
+        autoplayTimeout: 6000,
+        autoplayHoverPause: false
+      }).on('changed.owl.carousel', syncPosition);
+      sync2.owlCarousel({
+        startPosition: 0,
+        items: 1,
+        loop: false,
+        margin: 15,
+        autoplay: false,
+        nav: true,
+        navText: [arrow_prev, arrow_next],
+        navClass: ["slider-arrow slider-arrow_prev slider-arrow_red", "slider-arrow slider-arrow_next slider-arrow_red"],
+        navContainerClass: 'slider-arrow__wrp',
+        dots: false,
+        onInitialized: function onInitialized(e) {
+          // eslint-disable-next-line no-underscore-dangle
+          var thumbnailCurrentItem = $(e.target).find(thumbnailItemClass).eq(this._current);
+          thumbnailCurrentItem.addClass('synced');
+        }
+      }).on('click', thumbnailItemClass, function (e) {
+        e.preventDefault();
+        var duration = 10000;
+        var itemIndex = $(e.target).parents(thumbnailItemClass).index();
+        sync1.trigger('to.owl.carousel', [itemIndex, duration, true]);
+      }).on('changed.owl.carousel', function (el) {
+        var number = el.item.index;
+        var $owlSlider = sync1.data('owl.carousel');
+        $owlSlider.to(number, 100, true);
+      });
+      $('.service__monitor').find('.tabs-panel').removeClass('tabs-panel');
+      $('.js-packages-slider').owlCarousel((_$$owlCarousel = {
+        loop: true,
+        items: 1,
+        nav: true
+      }, _defineProperty(_$$owlCarousel, "nav", true), _defineProperty(_$$owlCarousel, "navText", [arrow_prev, arrow_next]), _defineProperty(_$$owlCarousel, "navClass", ["slider-arrow slider-arrow_prev slider-arrow_white", "slider-arrow slider-arrow_next slider-arrow_white"]), _defineProperty(_$$owlCarousel, "navContainerClass", 'slider-arrow__wrp  slider-arrow__wrp_packages'), _defineProperty(_$$owlCarousel, "dots", false), _$$owlCarousel));
+      $('.js-methodology-slider').owlCarousel({
+        loop: false,
+        items: 1,
+        margin: 10,
+        nav: true,
+        navText: [arrow_prev, arrow_next],
+        navClass: ["slider-arrow slider-arrow_prev slider-arrow_prev_methodology slider-arrow_red", "slider-arrow slider-arrow_next slider-arrow_red slider-arrow_next_methodology"],
+        navContainerClass: 'slider-arrow__wrp slider-arrow__wrp_methodology',
+        dots: false
+      });
+    } else {
+      //scroll bar
+      $('.js-scrollbar').mCustomScrollbar(_defineProperty({
+        axis: 'y',
+        theme: 'dark-thick',
+        scrollInertia: '330',
+        setHeight: 570,
+        scrollButtons: true
+      }, "scrollButtons", {
+        enable: true
+      })); //remove slider on desktop
+
+      $('.js-service-slider-top').trigger('destroy.owl.carousel').removeClass('js-service-slider-top owl-carousel owl-theme');
+      $('.js-service-slider-bottom').trigger('destroy.owl.carousel').removeClass('js-service-slider-bottom owl-carousel owl-theme');
+      $('.js-packages-slider').trigger('destroy.owl.carousel').removeClass('js-packages-slider owl-carousel owl-theme');
+    }
+  }
+
+  checkWidth();
+  $(window).resize(function () {
+    checkWidth(); // проверит при изменении размера окна клиента
+  });
+}); //scroll bar
+// $('.js-scrollbar').mCustomScrollbar({
+//     axis: 'y',
+//     theme: 'dark-thick',
+//     scrollInertia: '330',
+//     setHeight: 570,
+//     scrollButtons: true,
+//     scrollButtons: {enable: true}
+// });
+
+$(function () {});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.d95644427d1e5670f7ad.js.map
+//# sourceMappingURL=app.a4e77c61e041264d75d7.js.map

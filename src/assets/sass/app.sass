@@ -9,7 +9,8 @@
 @import 'components/scrollbar.sass'
 @import 'components/checkbox.sass'
 @import 'components/inputFile.sass'
-//@import 'components/sliders-elements.sass'
+@import 'components/preloader.sass'
+@import 'components/sliders-elements.sass'
 
 @keyframes slideLeft
   0%
@@ -45,6 +46,8 @@ img
 p
   margin: 0
   line-height: 25px
+.svg-icons
+  display: none
 .grid-layout
   position: relative
   display: grid
@@ -301,19 +304,16 @@ p
       text-decoration: none
       &:hover
          color: $red
-    &-item.is-active .service__content-title
+    &-item.is-active .service__content-title, .synced .service__content-title
       color: $red
     &-text
       display: none
-    &-item.is-active .service__content-text
+    &-item.is-active .service__content-text, .synced .service__content-text
       display: block
 .tabs-panel
   display: none
 .tabs-panel.is-active
   display: block
-
-
-
 
 //help
 
@@ -368,7 +368,6 @@ p
     background-color: #F3F3F3
     z-index: -1
     transition: .3s all ease-out
-
   &__item:hover .help__grey
     animation-name: slideLeft
     -webkit-animation-name: slideLeft
@@ -392,8 +391,6 @@ p
     font-size: 20px
     padding-bottom: 1.5em
     font-family: $bold, serif
-
-
 // platform
 .platform
   grid-column: 1 / span 16
@@ -431,7 +428,6 @@ p
   &__item_mobile
     grid-column: 10 / 12
     top: -140vh
-
 //soft
 .soft
   grid-column: 1 / span 16
@@ -463,8 +459,6 @@ p
     &:hover
       box-shadow: 0px 10px 10px rgba(225, 0, 0, 0.2)
       border-radius: 3px
-
-
 //mockup
 .mockup
   margin-top: 90px
@@ -474,6 +468,11 @@ p
   -webkit-background-size: contain
   background-size: contain
   background-repeat: no-repeat
+  &__mobile
+    display: none
+    grid-column: 1 / span 9
+    img
+      grid-template-columns: repeat(9, 1fr)
 //interface
 .interface
   position: relative
@@ -499,9 +498,7 @@ p
       width: 106px
     &_trns
       width: 251px
-
 //package
-
 .package
   display: grid
   grid-template-columns: repeat(16, 1fr)
@@ -647,7 +644,7 @@ p
   &__checkbox-text
     padding-top: 20px
     margin: 0 15px
-
+//methodology
 .methodology
   grid-column: 1 / span 16
   display: grid
@@ -724,9 +721,6 @@ p
       grid-template-rows: 1fr 1fr 1fr
       grid-column-gap: 0
       grid-gap: 20px
-
-    //display: flex
-    //justify-content: space-between
   &__bottom-item
     -webkit-border-radius: 3px
     -moz-border-radius: 3px
@@ -828,7 +822,6 @@ p
         position: relative
         top: 0
         left: 0
-
 //steps
 .steps
   grid-column: 1 / span 16
@@ -849,6 +842,8 @@ p
     border: 1px solid #DBDBDB
     box-sizing: border-box
     padding: 30px 30px 30px 40px
+    &_mobile
+      display: none
   &__number
     font-family: $semibold, serif
     font-size: 50px
@@ -859,8 +854,6 @@ p
     line-height: 25px
     span
       font-family: $bold, serif
-
-
 //feedback
 .feedback
   grid-column: 1 / span 16
@@ -908,7 +901,6 @@ p
     height: 50px
     width: 302px
     margin: 40px auto 0
-
 //about
 .about
   grid-column: 1 / span 16
@@ -967,7 +959,6 @@ p
   padding-bottom: 60px
   .soft__item
     padding: 10px 0
-
 //contacts
 .contacts
   grid-column: 1 / span 16
@@ -1036,7 +1027,6 @@ p
         background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.5 1.54545C4.65911 1.54545 1.54545 4.65911 1.54545 8.5C1.54545 12.3409 4.65911 15.4545 8.5 15.4545C12.3409 15.4545 15.4545 12.3409 15.4545 8.5C15.4545 4.65911 12.3409 1.54545 8.5 1.54545ZM0 8.5C0 3.80558 3.80558 0 8.5 0C13.1944 0 17 3.80558 17 8.5C17 13.1944 13.1944 17 8.5 17C3.80558 17 0 13.1944 0 8.5Z' fill='%231E2127'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.5 3.09091C8.92677 3.09091 9.27273 3.43687 9.27273 3.86364V8.02242L11.9365 9.35431C12.3182 9.54516 12.4729 10.0093 12.2821 10.391C12.0912 10.7727 11.627 10.9275 11.2453 10.7366L8.15443 9.19115C7.89264 9.06025 7.72727 8.79269 7.72727 8.5V3.86364C7.72727 3.43687 8.07323 3.09091 8.5 3.09091Z' fill='%231E2127'/%3E%3C/svg%3E%0A")
     &_requizits
       text-transform: uppercase
-
 // map
 .map
   grid-column: 1 / span 16
@@ -1084,7 +1074,7 @@ p
     margin-top: 20px
     height: 50px
     width: 302px
-
+//footer
 .footer
   grid-column: 1 / span 16
   display: grid
@@ -1196,11 +1186,6 @@ p
     &-text
       font-size: 13px
   &__copyright
-
-
-.svg-icons
-  display: none
-
 // modal
 .modal
   width: 954px
@@ -1281,5 +1266,94 @@ p
 .fancybox-bg
   background: #3D525D
   
+// mobile
+.menu-open
+  .hamburger_open
+    opacity: 0
+    visibility: hidden
+  .hamburger_close
+    opacity: 1
+    visibility: visible
+  .header-mobile__content
+    transform: translateY(0)
+    opacity: 1
+    visibility: visible
+    position: relative
+    width: 100%
+.hamburger
+  width: 45px
+  height: 45px
+  position: relative
+  background: #FFFFFF
+  box-shadow: 0px 2.72727px 2.72727px rgba(0, 0, 0, 0.25)
+  border-radius: 4px
+  border: 1px solid #F6F6F6
+  &:focus, &:active
+    outline: none
+  &_open, &_close
+    position: absolute
+    top: 30%
+    left: 0
+    right: 0
+    margin: 0 auto
+  &_open
+    -webkit-transition: .3s all ease-in-out
+    transition: .3s all ease-in-out
+  &_close
+    opacity: 0
+    visibility: hidden
+    transition: .3s all ease-in-out
+.header-mobile
+  display: none
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr))
+  background-color: #F6F6F6
+  padding: 18px 0
+  align-items: center
+  box-sizing: border-box
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25)
+  position: absolute
+  width: 100%
+  top: 0
+  z-index: 10
+  &__logo
+    grid-column: 2/5
+  &__btn
+    grid-column: 8/9
+    justify-self: end
+  &__content
+    grid-column: 2/9
+    -webkit-transform: translateY(-1000px)
+    transform: translateY(-1000px)
+    opacity: 0
+    visibility: hidden
+    background-color: #F6F6F6
+    position: absolute
+    transition: $trans
+    margin-top: 20px
+    width: 100%
+  &__contacts
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(5, 50px)
+    padding: 20px 0
+    border-top: 1px solid #C4C4C4
+    border-bottom: 1px solid #C4C4C4
+    .header__icon_phone:before, .header__icon_email:before, .header__icon_worktime:before, .header__icon_adress:before
+      left: 0
+    .header__icon_phone, .header__icon_email, .header__icon_worktime, .header__icon_adress
+      padding-left: 30px
+  &__nav
+     display: grid
+     grid-template-columns: 1fr
+     grid-template-rows: repeat(7, 50px)
+     grid-row-gap: 15px
+     margin-top: 20px
+     margin-bottom: 30px
+.only-desktop
+  display: block
+.only-mobile
+  display: none
+
+
 
 
