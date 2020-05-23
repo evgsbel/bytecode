@@ -174,6 +174,7 @@ $(() => {
                 items: 1,
                 nav: true,
                 nav: true,
+                autoHeight:true,
                 navText: [arrow_prev, arrow_next],
                 navClass: ["slider-arrow slider-arrow_prev slider-arrow_white", "slider-arrow slider-arrow_next slider-arrow_white"],
                 navContainerClass: 'slider-arrow__wrp  slider-arrow__wrp_packages',
@@ -184,12 +185,22 @@ $(() => {
                 items: 1,
                 margin: 10,
                 nav: true,
+                autoHeight:true,
                 navText: [arrow_prev, arrow_next],
                 navClass: ["slider-arrow slider-arrow_prev slider-arrow_prev_methodology slider-arrow_red", "slider-arrow slider-arrow_next slider-arrow_red slider-arrow_next_methodology"],
                 navContainerClass: 'slider-arrow__wrp slider-arrow__wrp_methodology',
                 dots: false,
             });
-
+            $('.js-soft-mobile-slider').owlCarousel({
+                loop: false,
+                items: 1,
+                margin: 120,
+                nav: true,
+                navText: [arrow_prev, arrow_next],
+                navClass: ["slider-arrow slider-arrow_prev slider-arrow_prev_soft-mobile slider-arrow_red", "slider-arrow slider-arrow_next slider-arrow_red slider-arrow_next_soft-mobile"],
+                navContainerClass: 'slider-arrow__wrp slider-arrow__wrp_soft-mobile',
+                dots: false,
+            });
 
         } else {
             //scroll bar
@@ -205,6 +216,7 @@ $(() => {
             $('.js-service-slider-top').trigger('destroy.owl.carousel').removeClass('js-service-slider-top owl-carousel owl-theme');
             $('.js-service-slider-bottom').trigger('destroy.owl.carousel').removeClass('js-service-slider-bottom owl-carousel owl-theme');
             $('.js-packages-slider').trigger('destroy.owl.carousel').removeClass('js-packages-slider owl-carousel owl-theme');
+            $('.js-soft-mobile-slider').trigger('destroy.owl.carousel').removeClass('js-soft-mobile-slider owl-carousel owl-theme');
 
         }
     }
