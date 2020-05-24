@@ -2537,7 +2537,9 @@ p {
     margin: 20px auto 0; }
   .mockup__mobile {
     margin-right: -15px;
-    margin-left: -15px; } }
+    margin-left: -15px; }
+  .presentation .feedback__input:nth-child(4), .presentation .feedback__input:nth-child(5), .presentation .feedback__input {
+    width: 100%; } }
 
 @media (max-width: 375.98px) {
   .feedback__wrapper {
@@ -2563,4 +2565,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.92cc9cdd6a5e341944e9.css.map*/
+/*# sourceMappingURL=app.76f809a2d4f573989f16.css.map*/
