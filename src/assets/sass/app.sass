@@ -248,7 +248,7 @@ p
   grid-column: 1 / span 16
   display: grid
   grid-template-columns: repeat(16, 1fr)
-  //grid-template-rows: minmax(100px, auto) calc(100vh - 100px)
+  grid-template-rows: minmax(100px, auto)
   position: relative
   padding-top: 12px
   &__title
@@ -396,7 +396,7 @@ p
   grid-column: 1 / span 16
   display: grid
   grid-template-columns: repeat(16, 1fr)
-  grid-template-rows: minmax(20px, auto)
+  grid-template-rows: minmax(100px, auto)
   position: relative
   margin-top: 60px
   padding-top: 60px
@@ -424,10 +424,10 @@ p
     grid-column: 1 / 9
   &__item_tablet
     grid-column: 5 / 11
-    top: -60vh
+    top: -65vh
   &__item_mobile
     grid-column: 10 / 12
-    top: -140vh
+    top: -155vh
 //soft
 .soft
   grid-column: 1 / span 16
@@ -620,6 +620,8 @@ p
       font-size: 40px
       span
         font-family: $medium, serif
+        &.rub
+          font-family: $rub
     &-subtitle
       font-size: 15px
       padding-bottom: 1.66em
@@ -644,6 +646,7 @@ p
   &__checkbox-text
     padding-top: 20px
     margin: 0 15px
+
 //methodology
 .methodology
   grid-column: 1 / span 16
