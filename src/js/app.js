@@ -217,7 +217,7 @@ $(() => {
             $('.js-service-slider-bottom').trigger('destroy.owl.carousel').removeClass('js-service-slider-bottom owl-carousel owl-theme');
             $('.js-packages-slider').trigger('destroy.owl.carousel').removeClass('js-packages-slider owl-carousel owl-theme');
             $('.js-soft-mobile-slider').trigger('destroy.owl.carousel').removeClass('js-soft-mobile-slider owl-carousel owl-theme');
-
+            $('.js-methodology-slider').trigger('destroy.owl.carousel').removeClass('js-methodology-slider owl-carousel owl-theme');
         }
     }
 

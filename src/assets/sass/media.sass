@@ -493,6 +493,10 @@
   .mockup__mobile
     margin-right: -15px
     margin-left: -15px
+@media (max-width: 375.98px)
+  .feedback
+    &__wrapper
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr))
 @media (max-width: 360.98px)
   .grid-layout, .help, .platform, .soft, .interface, .methodology, .package, .steps, .feedback, .contacts, .additionally, .footer, .about, .header-mobile
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr))
@@ -509,4 +513,7 @@
     padding-bottom: 0
   .soft-mobile__slide
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
+  .feedback
+    &__wrapper
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
 
