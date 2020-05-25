@@ -1084,7 +1084,6 @@ p {
   position: relative;
   margin-top: 60px;
   padding-top: 60px;
-  overflow: hidden;
   max-height: 950px; }
   .platform__white {
     background-color: #fff;
@@ -1095,7 +1094,7 @@ p {
     right: 0;
     top: 0;
     width: 100%;
-    height: 95%;
+    height: 100%;
     z-index: -1; }
   .platform__content {
     margin-top: 1.5em;
@@ -2604,4 +2603,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.ced5a9d6c60d447bafa8.css.map*/
+/*# sourceMappingURL=app.c2f2f4f99b40d27998fa.css.map*/
