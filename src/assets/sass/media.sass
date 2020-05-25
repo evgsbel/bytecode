@@ -193,6 +193,7 @@
     grid-column: 1/span 9
   .header
     padding-top: 0
+    z-index: 10
     &-design:after, &-design:before
       content: none
     &__topbar
@@ -243,6 +244,8 @@
     padding-bottom: 0
     &__wrapper
       max-width: 100%
+    &__btns
+      display: none
   .mockup
     background-image: none
     &__mobile
@@ -447,7 +450,7 @@
     margin-right: -15px
     margin-left: -15px
     grid-column: 1/span 4
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(1, 1fr)
     img
       grid-column: 1/span 4
       width: 100%
@@ -493,6 +496,9 @@
   .mockup__mobile
     margin-right: -15px
     margin-left: -15px
+    .interface__btns
+      margin-left: 15px
+      margin-right: 15px
   .presentation .feedback__input:nth-child(4), .presentation .feedback__input:nth-child(5), .presentation .feedback__input
     width: 100%
 @media (max-width: 375.98px)

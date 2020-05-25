@@ -589,15 +589,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var select2_dist_js_select2_min__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(select2_dist_js_select2_min__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min */ "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js");
 /* harmony import */ var malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/app */ "./src/js/app.js");
-/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_app__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
-/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/sass/app.sass */ "./src/assets/sass/app.sass");
-/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/sass/media.sass */ "./src/assets/sass/media.sass");
-/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var gsap_dist_gsap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap/dist/gsap */ "./node_modules/gsap/dist/gsap.js");
+/* harmony import */ var gsap_dist_gsap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(gsap_dist_gsap__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/app */ "./src/js/app.js");
+/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
+/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/sass/app.sass */ "./src/assets/sass/app.sass");
+/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/sass/media.sass */ "./src/assets/sass/media.sass");
+/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_9__);
 // JS
+
 
 
 
@@ -626,10 +628,17 @@ fetch("./assets/img/svg//sprite.svg").then(function (res) {
 /*!***********************!*\
   !*** ./src/js/app.js ***!
   \***********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($, jQuery) {function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($, jQuery) {/* harmony import */ var scrollmagic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! scrollmagic */ "./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js");
+/* harmony import */ var scrollmagic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(scrollmagic__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var scrollmagic_plugin_gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! scrollmagic-plugin-gsap */ "./node_modules/scrollmagic-plugin-gsap/index.js");
+/* harmony import */ var scrollmagic_plugin_gsap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(scrollmagic_plugin_gsap__WEBPACK_IMPORTED_MODULE_2__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
@@ -637,18 +646,80 @@ function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.it
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-//preloader
+ // Or use scrollmagic-with-ssr to avoid server rendering problems
+
+ // Also works with TweenLite and TimelineLite
+
+
+Object(scrollmagic_plugin_gsap__WEBPACK_IMPORTED_MODULE_2__["ScrollMagicPluginGsap"])(scrollmagic__WEBPACK_IMPORTED_MODULE_0__, gsap__WEBPACK_IMPORTED_MODULE_1__["TweenMax"], gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"]);
 $(function () {
   $(window).on('load', function () {
     $('.preloader__wrp').fadeOut();
+  });
+  $(function () {
+    var tl1p1 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
+        tl1p12 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
+        tl2p1 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
+        tl2p2 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
+        tl3p1 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
+        tl3p2 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
+        tl4p1 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
+        tl4p2 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"]();
+    var controller = new scrollmagic__WEBPACK_IMPORTED_MODULE_0__["Controller"]();
+    tl1p1.fromTo('.case__ttl', .2, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.steps__item', .2, {
+      rotationY: -40,
+      x: -10,
+      opacity: 0
+    }, {
+      rotationY: 0,
+      x: 0,
+      opacity: 1
+    }, .5);
+    tl1p12.fromTo('.layout__grid', 1, {
+      top: -2000
+    }, {
+      top: 0
+    }, 0.2) //.staggerFromTo('.header', .8, {opacity: 0}, {opacity: 1}, 0.3)
+    // .staggerFromTo('.header__nav-link', .2, {x:30,opacity:0}, {x:0,opacity: 1}, 0.1)
+    .staggerFromTo('.package__item_left', 1.2, {
+      x: -30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 0.6) // .staggerFromTo('.banner__subttl', .5, {x:-30,opacity:0}, {x:0,opacity:1}, 0.2)
+    .staggerFromTo('.package__item_right', .8, {
+      x: 30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 1) //.staggerFromTo('.banner__left', .8, {y: 30, opacity: 0}, {y: 0, opacity: 1}, 1)
+    //.staggerFromTo('.banner__center', .8, {y: 30, opacity: 0}, {y: 0, opacity: 1}, 1)
+    // .staggerFromTo('.banner__descr', .5, {y:30,opacity:0}, {y:0,opacity:1}, 1)
+    .setTween(tl1p1).addTo(controller);
+    var scene1p2 = new scrollmagic__WEBPACK_IMPORTED_MODULE_0__["Scene"]({
+      triggerElement: ".steps",
+      triggerHook: 0.6 // reverse: false,
+
+    }).setTween(tl1p12).addTo(controller);
+    var scene1p1 = new scrollmagic__WEBPACK_IMPORTED_MODULE_0__["Scene"]({
+      triggerElement: ".package__wrapper",
+      triggerHook: 0 // reverse: false,
+
+    });
   });
 }); //sliders arrow
 
@@ -737,8 +808,6 @@ $(function () {
     var windowWidth = $('body').innerWidth();
 
     if (windowWidth < 769) {
-      var _$$owlCarousel;
-
       //remove scrollbar on mobile
       $('js-scrollbar').mCustomScrollbar("destroy"); //service slider
 
@@ -815,11 +884,16 @@ $(function () {
         $owlSlider.to(number, 100, true);
       });
       $('.service__monitor').find('.tabs-panel').removeClass('tabs-panel');
-      $('.js-packages-slider').owlCarousel((_$$owlCarousel = {
+      $('.js-packages-slider').owlCarousel({
         loop: true,
         items: 1,
-        nav: true
-      }, _defineProperty(_$$owlCarousel, "nav", true), _defineProperty(_$$owlCarousel, "autoHeight", true), _defineProperty(_$$owlCarousel, "navText", [arrow_prev, arrow_next]), _defineProperty(_$$owlCarousel, "navClass", ["slider-arrow slider-arrow_prev slider-arrow_white", "slider-arrow slider-arrow_next slider-arrow_white"]), _defineProperty(_$$owlCarousel, "navContainerClass", 'slider-arrow__wrp  slider-arrow__wrp_packages'), _defineProperty(_$$owlCarousel, "dots", false), _$$owlCarousel));
+        nav: true,
+        autoHeight: true,
+        navText: [arrow_prev, arrow_next],
+        navClass: ["slider-arrow slider-arrow_prev slider-arrow_white", "slider-arrow slider-arrow_next slider-arrow_white"],
+        navContainerClass: 'slider-arrow__wrp  slider-arrow__wrp_packages',
+        dots: false
+      });
       $('.js-methodology-slider').owlCarousel({
         loop: false,
         items: 1,
@@ -843,15 +917,15 @@ $(function () {
       });
     } else {
       //scroll bar
-      $('.js-scrollbar').mCustomScrollbar(_defineProperty({
+      $('.js-scrollbar').mCustomScrollbar({
         axis: 'y',
         theme: 'dark-thick',
         scrollInertia: '330',
         setHeight: 570,
-        scrollButtons: true
-      }, "scrollButtons", {
-        enable: true
-      })); //remove slider on desktop
+        scrollButtons: {
+          enable: true
+        }
+      }); //remove slider on desktop
 
       $('.js-service-slider-top').trigger('destroy.owl.carousel').removeClass('js-service-slider-top owl-carousel owl-theme');
       $('.js-service-slider-bottom').trigger('destroy.owl.carousel').removeClass('js-service-slider-bottom owl-carousel owl-theme');
@@ -881,4 +955,4 @@ $(function () {});
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.76f809a2d4f573989f16.js.map
+//# sourceMappingURL=app.ced5a9d6c60d447bafa8.js.map

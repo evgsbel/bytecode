@@ -1,33 +1,43 @@
 .btn
-  background-color: $white
+  background-color: #0000
   border: 0
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25)
-  border-radius: 3px
-  color: $black1
-  font-family: $medium, serif
-  display: flex
-  justify-content: center
-  align-items: center
-  transition: $trans
-  cursor: pointer
-  text-decoration: none
+  span
+    background-color: $white
+    border: 0
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25)
+    border-radius: 3px
+    color: $black1
+    font-family: $medium, serif
+    transition: $trans
+    cursor: pointer
+    text-decoration: none
+    height: 100%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
   &:hover
-    color: $white
-    background: linear-gradient(180deg, #E10000 0%, #FF4013 100%)
-    transform: translateY(-5px)
-    box-shadow: 0px 10px 10px rgba(225, 0, 0, 0.2)
+    span
+      color: $white
+      background: linear-gradient(180deg, #E10000 0%, #FF4013 100%)
+      transform: translateY(-5px)
+      box-shadow: 0px 10px 10px rgba(225, 0, 0, 0.2)
   &:active
+    span
       box-shadow: 0px 2px 2px rgba(225, 0, 0, 0.25)
       transform: translateY(0)
   &_red
-    color: $white
-    background: linear-gradient(180deg, #E10000 0%, #FF4013 100%)
+    span
+      color: $white
+      background: linear-gradient(180deg, #E10000 0%, #FF4013 100%)
     &:hover
-      transform: translateY(-5px)
-      box-shadow: 0px 10px 10px rgba(225, 0, 0, 0.2)
+      span
+        transform: translateY(-5px)
+        box-shadow: 0px 10px 10px rgba(225, 0, 0, 0.2)
     &:active
-      box-shadow: 0px 2px 2px rgba(225, 0, 0, 0.25)
-      transform: translateY(0)
+      span
+        box-shadow: 0px 2px 2px rgba(225, 0, 0, 0.25)
+        transform: translateY(0)
 
 
 
