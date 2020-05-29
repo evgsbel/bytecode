@@ -2207,7 +2207,8 @@ p {
     margin-bottom: 30px; }
   .header__video {
     grid-column: 2/12;
-    margin-left: 0; }
+    margin-left: 0;
+    background-size: cover; }
   .header__nav_item {
     padding: 5px 1%; }
   .service {
@@ -2593,4 +2594,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.88e4fd39eb4f73b8528c.css.map*/
+/*# sourceMappingURL=app.a45b181fe62eaf043e24.css.map*/

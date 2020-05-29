@@ -721,7 +721,19 @@ $(function () {
 
     });
   });
-}); //sliders arrow
+}); // $(document).ready(function () {
+//     $(".tabs__content-item:not(:first-child)").hide();
+//     $(".tabs__container div.tabs__content-item.active-tab").show();
+//     $('ul.tabs__list > li').click(function () {
+//       if (!($(this).hasClass('active'))) {
+//         var thisLi = $(this);
+//         var numLi = thisLi.index();
+//         thisLi.addClass('active').siblings().removeClass('active');
+//         thisLi.parent().next().children('div').hide().eq(numLi).fadeIn('slow');
+//       }
+//     });
+//   });
+//sliders arrow
 
 var arrow_next = "<svg width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 2L11.5 11.5L2 21' stroke-width='3'/></svg>",
     arrow_prev = "<svg width='14' height='23' viewBox='0 0 14 23' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12 2L2.5 11.5L12 21' stroke-width='3'/></svg>";
@@ -968,4 +980,4 @@ $(function () {});
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.88e4fd39eb4f73b8528c.js.map
+//# sourceMappingURL=app.a45b181fe62eaf043e24.js.map
