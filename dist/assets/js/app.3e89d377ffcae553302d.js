@@ -778,13 +778,26 @@ try {
   _iterator.f();
 }
 
-$('.js-package__input').change(function () {
+$('.js-package__input_right').change(function () {
   if ($(this).is(':checked')) {
     $(this).parent().removeClass('unchecked');
     $(this).parent().addClass('checked');
+    $('.js-result-price_right').html('3 960');
   } else {
     $(this).parent().removeClass('checked');
     $(this).parent().addClass('unchecked');
+    $('.js-result-price_right').html('4 320');
+  }
+});
+$('.js-package__input_left').change(function () {
+  if ($(this).is(':checked')) {
+    $(this).parent().removeClass('unchecked');
+    $(this).parent().addClass('checked');
+    $('.js-result-price_left').html('2 500');
+  } else {
+    $(this).parent().removeClass('checked');
+    $(this).parent().addClass('unchecked');
+    $('.js-result-price_left').html('2 620');
   }
 }); // input file
 
@@ -955,4 +968,4 @@ $(function () {});
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.c2f2f4f99b40d27998fa.js.map
+//# sourceMappingURL=app.3e89d377ffcae553302d.js.map
