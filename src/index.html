@@ -105,7 +105,7 @@
                     <div class="header__video_play">
                         <div class="header__video_play-in">
                             <svg width="182" height="17" viewBox="0 0 182 17">
-                                <use xlink:href="#text-look"></use>
+                                <use xlink:href="#ext-look"></use>
                             </svg>
                         </div>
                     </div>
@@ -123,240 +123,319 @@
             </div>
         </header>
     </div>
-    <section class="service tabs-container" id="service">
+    <!--    <div class="tabs">-->
+    <!--				<ul class="tabs__list">-->
+    <!--					<li class="">ИТ-аутсорсинг</li>-->
+    <!--					<li class="">ИТ-консалтинг</li>-->
+    <!--					<li class="active">Сервисное обслуживание</li>-->
+    <!--				</ul>-->
+    <!--				<div class="tabs__container">-->
+    <!--					<div class="tabs__content-item active-tab" style="display: none;">-->
+    <!--						<span>П1</span>-->
+    <!--						<img src="img/out__img_1.png" alt="out__img_1.png" class="out__img">-->
+    <!--					</div>-->
+    <!--					<div class="tabs__content-item" style="display: none;">-->
+    <!--						<span>П2222</span>-->
+    <!--						<img src="img/out__img_1.png" alt="out__img_1.png" class="out__img">-->
+    <!--					</div>-->
+    <!--					<div class="tabs__content-item" style="">-->
+    <!--						<span>П3333</span>-->
+    <!--						<img src="img/out__img_1.png" alt="out__img_1.png" class="out__img">-->
+    <!--					</div>-->
+    <!--				</div>-->
+    <!--			</div>-->
+    <section class="service cd-tabs js-cd-tabs" id="service">
         <div class="service__white"></div>
         <div class="service__title">
             Service Creatio
         </div>
-        <div class="service__monitor tabs-content js-service-slider-top owl-carousel owl-theme">
-            <div class="tabs-panel is-active" data-index="0"><img src="./assets/img/s-00.png" alt=""></div>
-            <div class="tabs-panel" data-index="1"><img src="./assets/img/s-01.png" alt=""></div>
-            <div class="tabs-panel" data-index="2"><img src="./assets/img/s-02.png" alt=""></div>
-            <div class="tabs-panel" data-index="2"><img src="./assets/img/s-02.png" alt=""></div>
-            <div class="tabs-panel" data-index="3"><img src="./assets/img/s-03.png" alt=""></div>
-            <div class="tabs-panel" data-index="4"><img src="./assets/img/s-04.png" alt=""></div>
-            <div class="tabs-panel" data-index="5"><img src="./assets/img/s-05.png" alt=""></div>
-            <div class="tabs-panel" data-index="6"><img src="./assets/img/s-06.png" alt=""></div>
-            <div class="tabs-panel" data-index="7"><img src="./assets/img/s-07.png" alt=""></div>
-            <div class="tabs-panel" data-index="8"><img src="./assets/img/s-08.png" alt=""></div>
-            <div class="tabs-panel" data-index="9"><img src="./assets/img/s-09.png" alt=""></div>
-            <div class="tabs-panel" data-index="10"><img src="./assets/img/s-010.png" alt=""></div>
-            <div class="tabs-panel" data-index="11"><img src="./assets/img/s-011.png" alt=""></div>
-            <div class="tabs-panel" data-index="12"><img src="./assets/img/s-012.png" alt=""></div>
-            <div class="tabs-panel" data-index="13"><img src="./assets/img/s-013.png" alt=""></div>
-            <div class="tabs-panel" data-index="14"><img src="./assets/img/s-014.png" alt=""></div>
-            <div class="tabs-panel" data-index="15"><img src="./assets/img/s-015.png" alt=""></div>
-            <div class="tabs-panel" data-index="16"><img src="./assets/img/s-016.png" alt=""></div>
-            <div class="tabs-panel" data-index="17"><img src="./assets/img/s-017.png" alt=""></div>
-            <div class="tabs-panel" data-index="18"><img src="./assets/img/s-018.png" alt=""></div>
+        <div class="service__monitor cd-tabs__panels js-service-slider-top owl-carousel owl-theme">
+            <div class="cd-tabs__panel cd-tabs__panel--selected" id="tab-0">
+                <a href="./assets/img/sc-00.png" data-fancybox="tab-00"><img src="./assets/img/s-00.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-01">
+                <a href="./assets/img/sc-01.png" data-fancybox="tab-01"><img src="./assets/img/s-01.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-02">
+                <a href="./assets/img/sc-02.png" data-fancybox="tab-02"><img src="./assets/img/s-02.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-03">
+                <a href="./assets/img/sc-03.png" data-fancybox="tab-03"><img src="./assets/img/s-03.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-04">
+                <a href="./assets/img/sc-04.png" data-fancybox="tab-04"><img src="./assets/img/s-04.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-05">
+                <a href="./assets/img/sc-05.png" data-fancybox="tab-05"><img src="./assets/img/s-05.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-06">
+                <a href="./assets/img/sc-06.png" data-fancybox="tab-06"><img src="./assets/img/s-06.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-07">
+                <a href="./assets/img/sc-07.png" data-fancybox="tab-07"><img src="./assets/img/s-07.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-08">
+                <a href="./assets/img/sc-08.png" data-fancybox="tab-08"><img src="./assets/img/s-08.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-09">
+                <a href="./assets/img/sc-09.png" data-fancybox="tab-09"><img src="./assets/img/s-09.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-010">
+                <a href="./assets/img/sc-010.png.png" data-fancybox="tab-010"><img src="./assets/img/s-010.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-011">
+                <a href="./assets/img/sc-011.png" data-fancybox="tab-011"><img src="./assets/img/s-011.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-012">
+                <a href="./assets/img/sc-012.png" data-fancybox="tab-012"><img src="./assets/img/s-012.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-013">
+                <a href="./assets/img/sc-013.png" data-fancybox="tab-013"><img src="./assets/img/s-013.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-014">
+                <a href="./assets/img/sc-014.png" data-fancybox="tab-014"><img src="./assets/img/s-014.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-015">
+                <a href="./assets/img/sc-015.png" data-fancybox="tab-015"><img src="./assets/img/s-015.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-016">
+                <a href="./assets/img/sc-016.png" data-fancybox="tab-016"><img src="./assets/img/s-016.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-017">
+                <a href="./assets/img/sc-017.png" data-fancybox="tab-017"><img src="./assets/img/s-017.png" alt=""></a>
+            </div>
+            <div class="cd-tabs__panel" id="tab-018">
+                <a href="./assets/img/sc-018.png" data-fancybox="tab-018"><img src="./assets/img/s-018.png" alt=""></a>
+            </div>
         </div>
-        <div class="service__content js-scrollbar tabs js-service-slider-bottom owl-carousel owl-theme"
-             data-mcs-theme="dark-thick">
-            <div class="is-active service__content-item">
-                <a href="" class="service__content-title">
-                    Портрет потребителя услуг
-                </a>
-                <div class="service__content-text">
-                    <p> Создайте единую базу клиентов вашей сервисной службы.
-                        Сегментируйте контактов и контрагентов для понимания структуры вашей клиентской базы. Очищайте
-                        базу данных от повторяющихся контактов и контрагентов, с помощью механизма поиска дублей
-                    </p>
+        <div class="service__content js-scrollbar cd-tabs__navigation" data-mcs-theme="dark-thick">
+            <div class="cd-tabs__list js-service-slider-bottom owl-carousel owl-theme">
+                <div class="service__content-item">
+                    <a href="#ab-00" class="service__content-title cd-tabs__item cd-tabs__item--selected">
+                        Портрет потребителя услуг
+                    </a>
+                    <div class="service__content-text">
+                        <p> Создайте единую базу клиентов вашей сервисной службы.
+                            Сегментируйте контактов и контрагентов для понимания структуры вашей клиентской базы.
+                            Очищайте
+                            базу данных от повторяющихся контактов и контрагентов, с помощью механизма поиска дублей
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Омниканальные коммуникации</a>
-                <div class="service__content-text">
-                    <p> Предоставьте своим клиентам возможность самостоятельно регистрировать обращения, проводить
-                        мониторинг хода работ и давать оперативную обратную связь о качестве сервиса по нескольким
-                        каналам коммуникаций: портал самообслуживания, почта, форма обратной связи на сайте, лента,
-                        телефонное обращение и другие внешние каналы</p>
+                <div class="service__content-item">
+                    <a href="#ab-01" class="cd-tabs__item cd-tabs__item service__content-title">Омниканальные коммуникации</a>
+                    <div class="service__content-text">
+                        <p> Предоставьте своим клиентам возможность самостоятельно регистрировать обращения, проводить
+                            мониторинг хода работ и давать оперативную обратную связь о качестве сервиса по нескольким
+                            каналам коммуникаций: портал самообслуживания, почта, форма обратной связи на сайте, лента,
+                            телефонное обращение и другие внешние каналы</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">
-                    Единое окно оператора
-                </a>
-                <div class="service__content-text">
-                    <p> Предоставьте возможность сотруднику первой линии поддержки максимально эффективно работать с
-                        ежедневными задачами, используя преднастроенное рабочее место. В едином окне сотрудник может
-                        легко обрабатывать очереди обращений, совершать коммуникации, маршрутизировать обращения,
-                        обмениваться информацией в корпоративной социальной сети и отслеживать собственные показатели
-                        эффективности, не переключаясь между разделами Service Creatio</p>
+                <div class="service__content-item">
+                    <a href="#ab-02" class="service__content-title cd-tabs__item">
+                        Единое окно оператора
+                    </a>
+                    <div class="service__content-text">
+                        <p> Предоставьте возможность сотруднику первой линии поддержки максимально эффективно работать с
+                            ежедневными задачами, используя преднастроенное рабочее место. В едином окне сотрудник может
+                            легко обрабатывать очереди обращений, совершать коммуникации, маршрутизировать обращения,
+                            обмениваться информацией в корпоративной социальной сети и отслеживать собственные
+                            показатели
+                            эффективности, не переключаясь между разделами Service Creatio</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a class="service__content-title" href="">ITSM процессы</a>
-                <div class="service__content-text">
-                    <p>Используйте рекомендации библиотеки ITIL и процессного подхода ITSM для повышения эффективности
-                        работы службы Service Desk. Референтные процессы помогут легко нивелировать ошибки в рабочих
-                        процедурах и повысить качество отработки обращений. Изменяйте процессы, учитывая уникальную
-                        специфику вашей службы Service Desk
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-03" class="service__content-title cd-tabs__item">ITSM процессы</a>
+                    <div class="service__content-text">
+                        <p>Используйте рекомендации библиотеки ITIL и процессного подхода ITSM для повышения
+                            эффективности
+                            работы службы Service Desk. Референтные процессы помогут легко нивелировать ошибки в рабочих
+                            процедурах и повысить качество отработки обращений. Изменяйте процессы, учитывая уникальную
+                            специфику вашей службы Service Desk
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Инциденты и запросы на обслуживание
-                </a>
-                <div class="service__content-text">
-                    <p> Регистрируйте обращения от потребителей услуг и разделяйте их на инциденты и запросы на
-                        обслуживание. Контролируйте рассчитанные временные рамки обработки SLA. Используйте опыт коллег
-                        в решении вопросов по инцидентам с помощью функции поиска похожих обращений. Эскалируйте
-                        инцидент на следующую линию поддержки или используйте для решения статьи базы знаний
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-04" class="service__content-title cd-tabs__item">Инциденты и запросы на обслуживание
+                    </a>
+                    <div class="service__content-text">
+                        <p> Регистрируйте обращения от потребителей услуг и разделяйте их на инциденты и запросы на
+                            обслуживание. Контролируйте рассчитанные временные рамки обработки SLA. Используйте опыт
+                            коллег
+                            в решении вопросов по инцидентам с помощью функции поиска похожих обращений. Эскалируйте
+                            инцидент на следующую линию поддержки или используйте для решения статьи базы знаний
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Очереди обращений</a>
-                <div class="service__content-text">
-                    <p> Управляйте исходящими и входящими коммуникациями службы Service Desk, используя инструменты
-                        настройки очередей обращений. Создавайте различные типы очередей: динамические на основе
-                        фильтров или статические с четким перечнем записей на обработку. Формируйте открытые с
-                        возможностью выбора записи или же закрытые очереди, в которых оператор увидит запись только
-                        после взятия ее в работу
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-05" class="service__content-title cd-tabs__item">Очереди обращений</a>
+                    <div class="service__content-text">
+                        <p> Управляйте исходящими и входящими коммуникациями службы Service Desk, используя инструменты
+                            настройки очередей обращений. Создавайте различные типы очередей: динамические на основе
+                            фильтров или статические с четким перечнем записей на обработку. Формируйте открытые с
+                            возможностью выбора записи или же закрытые очереди, в которых оператор увидит запись только
+                            после взятия ее в работу
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Единый каталог сервисов</a>
-                <div class="service__content-text">
-                    <p>Организуйте единое хранилище предоставляемых сервисов вне зависимости от размера вашей службы
-                        Service Desk и масштаба IT-инфраструктуры. Управляйте техническими и временными характеристиками
-                        сервисов, назначайте профильных инженеров сервисной службы ответственными за обработку обращений
-                        по конкретным сервисам. В считанные минуты устраняйте проблемы в работе сервисов с помощью
-                        графического изображения взаимосвязей между сервисами и конфигурациями</p>
+                <div class="service__content-item">
+                    <a href="#ab-06" class="service__content-title cd-tabs__item">Единый каталог сервисов</a>
+                    <div class="service__content-text">
+                        <p>Организуйте единое хранилище предоставляемых сервисов вне зависимости от размера вашей службы
+                            Service Desk и масштаба IT-инфраструктуры. Управляйте техническими и временными
+                            характеристиками
+                            сервисов, назначайте профильных инженеров сервисной службы ответственными за обработку
+                            обращений
+                            по конкретным сервисам. В считанные минуты устраняйте проблемы в работе сервисов с помощью
+                            графического изображения взаимосвязей между сервисами и конфигурациями</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Сервисные договора</a>
-                <div class="service__content-text">
-                    <p> Регистрируйте все типы сервисных договоров, необходимых для организаций различных уровней
-                        обслуживания: с потребителями услуг (SLA), с функциональными подразделениями сервисной службы
-                        (OLA), и внешними сервис-провайдерами (UC). Определяйте ключевые объекты обслуживания и
-                        предоставляемые услуги, зафиксируйте календарь, сроки действия соглашения и контролируйте
-                        пролонгацию. Анализируйте зарегистрированные обращения и выявленные проблемы в разрезе сервисных
-                        договоров
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-07" class="service__content-title cd-tabs__item">Сервисные договора</a>
+                    <div class="service__content-text">
+                        <p> Регистрируйте все типы сервисных договоров, необходимых для организаций различных уровней
+                            обслуживания: с потребителями услуг (SLA), с функциональными подразделениями сервисной
+                            службы
+                            (OLA), и внешними сервис-провайдерами (UC). Определяйте ключевые объекты обслуживания и
+                            предоставляемые услуги, зафиксируйте календарь, сроки действия соглашения и контролируйте
+                            пролонгацию. Анализируйте зарегистрированные обращения и выявленные проблемы в разрезе
+                            сервисных
+                            договоров
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Портал самообслуживания
-                </a>
-                <div class="service__content-text">
-                    <p> Потребитель услуг может самостоятельно регистрировать обращения, контролировать процесс их
-                        обработки, предоставлять обратную связь и оценивать качество сервиса на портале
-                        самообслуживания. С помощью портала самообслуживания ваши клиенты всегда будут в курсе новостей
-                        компании и предоставляемых услуг, а также смогут самостоятельно найти ответы на возникшие
-                        вопросы в публичной базе знаний
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-08" class="service__content-title cd-tabs__item">Портал самообслуживания
+                    </a>
+                    <div class="service__content-text">
+                        <p> Потребитель услуг может самостоятельно регистрировать обращения, контролировать процесс их
+                            обработки, предоставлять обратную связь и оценивать качество сервиса на портале
+                            самообслуживания. С помощью портала самообслуживания ваши клиенты всегда будут в курсе
+                            новостей
+                            компании и предоставляемых услуг, а также смогут самостоятельно найти ответы на возникшие
+                            вопросы в публичной базе знаний
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Конфигурационные единицы
-                </a>
-                <div class="service__content-text">
-                    <p> Храните информацию о сервисных активах вашей компании. Зафиксируйте инвентарный номер,
-                        категорию, тип, определите модель и укажите технические характеристики. Ведите список
-                        сотрудников и клиентов, которые используют конфигурационные единицы. Анализируйте
-                        зарегистрированные обращения и выявленные проблемы в разрезе конфигураций
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-09" class="service__content-title cd-tabs__item">Конфигурационные единицы
+                    </a>
+                    <div class="service__content-text">
+                        <p> Храните информацию о сервисных активах вашей компании. Зафиксируйте инвентарный номер,
+                            категорию, тип, определите модель и укажите технические характеристики. Ведите список
+                            сотрудников и клиентов, которые используют конфигурационные единицы. Анализируйте
+                            зарегистрированные обращения и выявленные проблемы в разрезе конфигураций
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class=" service__content-item">
-                <a href="" class="service__content-title">База знаний
-                </a>
-                <div class="service__content-text">
-                    <p> Объедините в Service Creatio все знания о предоставляемых сервисах, конфигурационных единицах и
-                        известных ошибках. База знаний позволяет закрывать большинство обращений уже на первой линии
-                        поддержки. Определяйте часто используемые статьи для ускорения обучения новых сотрудников
-                        сервисной службы</p>
+                <div class=" service__content-item">
+                    <a href="#ab-010" class="service__content-title cd-tabs__item">База знаний
+                    </a>
+                    <div class="service__content-text">
+                        <p> Объедините в Service Creatio все знания о предоставляемых сервисах, конфигурационных
+                            единицах и
+                            известных ошибках. База знаний позволяет закрывать большинство обращений уже на первой линии
+                            поддержки. Определяйте часто используемые статьи для ускорения обучения новых сотрудников
+                            сервисной службы</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">
-                    Проблемы
-                </a>
-                <div class="service__content-text">
-                    <p> Регистрируйте выявленные проблемы, определите приоритеты, затрагиваемые сервисы,
-                        конфигурационные единицы и назначьте ответственных исполнителей. Выполните анализ причин
-                        возникновения проблемы и запланируйте работы по их устранению. Ведите полное описание решений
-                        проблем или известных ошибок. Закрывайте связанные инциденты и информируйте потребителей услуг
-                        об устранении «узких» мест
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-011" class="service__content-title cd-tabs__item">
+                        Проблемы
+                    </a>
+                    <div class="service__content-text">
+                        <p> Регистрируйте выявленные проблемы, определите приоритеты, затрагиваемые сервисы,
+                            конфигурационные единицы и назначьте ответственных исполнителей. Выполните анализ причин
+                            возникновения проблемы и запланируйте работы по их устранению. Ведите полное описание
+                            решений
+                            проблем или известных ошибок. Закрывайте связанные инциденты и информируйте потребителей
+                            услуг
+                            об устранении «узких» мест
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">
-                    Изменения
-                </a>
-                <div class="service__content-text">
-                    <p> Планируйте реализацию изменений для устранения проблем и улучшения качества предоставляемых
-                        IТ-услуг. Определяйте категорию, приоритет и команду, которая будет работать над изменением.
-                        Контролируйте процесс реализации изменений, отслеживая фактические трудозатраты, качество
-                        промежуточных результатов и сроки. Отслеживайте инциденты и проблемы, которые удалось устранить
-                        в результате изменения</p>
+                <div class="service__content-item">
+                    <a href="#ab-012" class="service__content-title cd-tabs__item">
+                        Изменения
+                    </a>
+                    <div class="service__content-text">
+                        <p> Планируйте реализацию изменений для устранения проблем и улучшения качества предоставляемых
+                            IТ-услуг. Определяйте категорию, приоритет и команду, которая будет работать над изменением.
+                            Контролируйте процесс реализации изменений, отслеживая фактические трудозатраты, качество
+                            промежуточных результатов и сроки. Отслеживайте инциденты и проблемы, которые удалось
+                            устранить
+                            в результате изменения</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a class="service__content-title" href="">Релизы</a>
-                <div class="service__content-text">
-                    <p> Храните информацию о запланированных и выпущенных релизах. Зафиксируйте информацию о необходимых
-                        трудозатратах, команде и сроках реализации. Ведите список изменений, которые войдут в релиз
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-013" class="service__content-title cd-tabs__item">Релизы</a>
+                    <div class="service__content-text">
+                        <p> Храните информацию о запланированных и выпущенных релизах. Зафиксируйте информацию о
+                            необходимых
+                            трудозатратах, команде и сроках реализации. Ведите список изменений, которые войдут в релиз
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Дизайнер системы
-                </a>
-                <div class="service__content-text">
-                    <p>Service Creatio предоставляет неограниченные возможности по индивидуальной настройке приложения
-                        под требуемую отраслевую и корпоративную специфику. В несколько кликов создавайте новые разделы
-                        или редактируйте существующие. Изменяйте бизнес-логику системы, добавляйте поля, вкладки, детали
-                        пользовательскими средствами</p>
+                <div class="service__content-item">
+                    <a href="#ab-014" class="service__content-title cd-tabs__item">Дизайнер системы
+                    </a>
+                    <div class="service__content-text">
+                        <p>Service Creatio предоставляет неограниченные возможности по индивидуальной настройке
+                            приложения
+                            под требуемую отраслевую и корпоративную специфику. В несколько кликов создавайте новые
+                            разделы
+                            или редактируйте существующие. Изменяйте бизнес-логику системы, добавляйте поля, вкладки,
+                            детали
+                            пользовательскими средствами</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Импорт данных
-                </a>
-                <div class="service__content-text">
-                    <p> Используйте универсальный импорт из Excel, который поможет быстро загрузить данные контактов,
-                        контрагентов, список внутренних пользователей, электронный каталог документов и другую
-                        информацию в Service Creatio</p>
+                <div class="service__content-item">
+                    <a href="#ab-015" class="service__content-title cd-tabs__item">Импорт данных
+                    </a>
+                    <div class="service__content-text">
+                        <p> Используйте универсальный импорт из Excel, который поможет быстро загрузить данные
+                            контактов,
+                            контрагентов, список внутренних пользователей, электронный каталог документов и другую
+                            информацию в Service Creatio</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Безопасность и администрирование
-                </a>
-                <div class="service__content-text">
-                    <p>Обеспечьте сохранность данных и многоуровневую защиту приложения от несанкционированного доступа
-                        с помощью гибкого администрирования прав доступа и централизованного управления пользователями
-                        через Single Sign-One и Active Directory</p>
+                <div class="service__content-item">
+                    <a href="#ab-016" class="service__content-title cd-tabs__item">Безопасность и администрирование
+                    </a>
+                    <div class="service__content-text">
+                        <p>Обеспечьте сохранность данных и многоуровневую защиту приложения от несанкционированного
+                            доступа
+                            с помощью гибкого администрирования прав доступа и централизованного управления
+                            пользователями
+                            через Single Sign-One и Active Directory</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Мобильное приложение
-                </a>
-                <div class="service__content-text">
-                    <p> Организуйте работу сотрудников с Service Creatio в удаленном режиме с помощью мобильного
-                        приложения. Настраивайте интерфейс мобильных Android и iOS приложений из web клиента
+                <div class="service__content-item">
+                    <a href="#ab-017" class="service__content-title cd-tabs__item">Мобильное приложение
+                    </a>
+                    <div class="service__content-text">
+                        <p> Организуйте работу сотрудников с Service Creatio в удаленном режиме с помощью мобильного
+                            приложения. Настраивайте интерфейс мобильных Android и iOS приложений из web клиента
 
-                    </p>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="service__content-item">
-                <a href="" class="service__content-title">Аналитика</a>
-                <div class="service__content-text">
-                    <p> Анализируйте работу компании в режиме реального времени. Получайте срезы по всем ключевым
-                        показателям деятельности для принятия верных управленческих решений. Используйте готовые
-                        дашборды, которые уже заложены в систему. Настраивайте собственные графики и отчеты для
-                        получения актуальной картины с учетом вашей отраслевой и корпоративной специфики
-                    </p>
+                <div class="service__content-item">
+                    <a href="#ab-018" class="service__content-title cd-tabs__item">Аналитика</a>
+                    <div class="service__content-text">
+                        <p> Анализируйте работу компании в режиме реального времени. Получайте срезы по всем ключевым
+                            показателям деятельности для принятия верных управленческих решений. Используйте готовые
+                            дашборды, которые уже заложены в систему. Настраивайте собственные графики и отчеты для
+                            получения актуальной картины с учетом вашей отраслевой и корпоративной специфики
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="help" id="advantages">
         <div class="container">
-            <div class="title">Решаем сложные задачи
+            <div class="title">Решаем <br>сложные задачи
             </div>
             <div class="help__wrapper">
                 <div class="help__items">
@@ -494,7 +573,7 @@
         <section class="interface">
             <div class="container">
                 <div class="title">
-                    Изменяйте интерфейс в несколько кликов
+                    Изменяйте интерфейс <br>в несколько кликов
                 </div>
                 <div class="interface__wrapper">
                     <p>Неограниченные возможности по настройке и кастомизации платформы пользовательскими средствами
@@ -533,26 +612,26 @@
                                     контакт-центров</p>
                             </div>
                             <ul class="package__list">
-                                <li class="package__list-item">Портрет потребителя услуг</li>
-                                <li class="package__list-item">Омниканальные коммуникации</li>
-                                <li class="package__list-item">Единое окно оператора</li>
-                                <li class="package__list-item">ITSM процессы</li>
-                                <li class="package__list-item">Инциденты и запросы на обслуживание</li>
-                                <li class="package__list-item">Очереди обращений</li>
-                                <li class="package__list-item">Единый каталог сервисов</li>
-                                <li class="package__list-item">Портал самообслуживания</li>
-                                <li class="package__list-item">База знаний</li>
-                                <li class="package__list-item">Дизайнер системы</li>
-                                <li class="package__list-item">Импорт данных</li>
-                                <li class="package__list-item">Безопасность и администрирование</li>
-                                <li class="package__list-item">Мобильное приложение</li>
-                                <li class="package__list-item">Аналитика</li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Портрет потребителя услуг</a></li>
+                                <li class="package__list-item"><a href="##service" class="js-ancor-link">Омниканальные коммуникации</a></li>
+                                <li class="package__list-item"><a href="##service" class="js-ancor-link">Единое окно оператора</a></li>
+                                <li class="package__list-item"><a href="##service" class="js-ancor-link">ITSM процессы</a></li>
+                                <li class="package__list-item"><a href="##service" class="js-ancor-link">Инциденты и запросы на обслуживание</a></li>
+                                <li class="package__list-item"><a href="##service" class="js-ancor-link">Очереди обращений</a></li>
+                                <li class="package__list-item"><a href="##service" class="js-ancor-link">Единый каталог сервисов</a></li>
+                                <li class="package__list-item"><a href="##service" class="js-ancor-link">Портал самообслуживания</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">База знаний</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Дизайнер системы</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Импорт данных</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Безопасность и администрирование</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Мобильное приложение</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Аналитика</a></li>
                                 <div class="package__list-opacity">
-                                    <li class="package__list-item package__list-item_plus">Сервисные договора</li>
-                                    <li class="package__list-item package__list-item_plus">Конфигурационные единицы</li>
-                                    <li class="package__list-item package__list-item_plus">Проблемы</li>
-                                    <li class="package__list-item package__list-item_plus">Изменения</li>
-                                    <li class="package__list-item package__list-item_plus">Релизы</li>
+                                    <li class="package__list-item package__list-item_plus"><a href="##service" class="js-ancor-link">Сервисные договора</a></li>
+                                    <li class="package__list-item package__list-item_plus"><a href="##service" class="js-ancor-link">Конфигурационные единицы</a></li>
+                                    <li class="package__list-item package__list-item_plus"><a href="#service" class="js-ancor-link">Проблемы</a></li>
+                                    <li class="package__list-item package__list-item_plus"><a href="#service" class="js-ancor-link">Изменения</a></li>
+                                    <li class="package__list-item package__list-item_plus"><a href="#service" class="js-ancor-link">Релизы</a></li>
                                 </div>
                             </ul>
                             <div class="package__price">
@@ -586,25 +665,25 @@
                                     рекомендаций ITIL</p>
                             </div>
                             <ul class="package__list">
-                                <li class="package__list-item">Портрет потребителя услуг</li>
-                                <li class="package__list-item">Омниканальные коммуникации</li>
-                                <li class="package__list-item">Единое окно оператора</li>
-                                <li class="package__list-item">ITSM процессы</li>
-                                <li class="package__list-item">Инциденты и запросы на обслуживание</li>
-                                <li class="package__list-item">Очереди обращений</li>
-                                <li class="package__list-item">Единый каталог сервисов</li>
-                                <li class="package__list-item">Портал самообслуживания</li>
-                                <li class="package__list-item">База знаний</li>
-                                <li class="package__list-item">Дизайнер системы</li>
-                                <li class="package__list-item">Импорт данных</li>
-                                <li class="package__list-item">Безопасность и администрирование</li>
-                                <li class="package__list-item">Мобильное приложение</li>
-                                <li class="package__list-item">Аналитика</li>
-                                <li class="package__list-item package__list-item_plus">Сервисные договора</li>
-                                <li class="package__list-item package__list-item_plus">Конфигурационные единицы</li>
-                                <li class="package__list-item package__list-item_plus">Проблемы</li>
-                                <li class="package__list-item package__list-item_plus">Изменения</li>
-                                <li class="package__list-item package__list-item_plus">Релизы</li>
+                                <li class="package__list-item"><a href="service" class="js-ancor-link">Портрет потребителя услуг</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Омниканальные коммуникации</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Единое окно оператора</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">ITSM процессы</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Инциденты и запросы на обслуживание</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Очереди обращений</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Единый каталог сервисов</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Портал самообслуживания</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">База знаний</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Дизайнер системы</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Импорт данных</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Безопасность и администрирование</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Мобильное приложение</a></li>
+                                <li class="package__list-item"><a href="#service" class="js-ancor-link">Аналитика</a></li>
+                                 <li class="package__list-item package__list-item_plus"><a href="#service" class="js-ancor-link">Сервисные договора</a></li>
+                                <li class="package__list-item package__list-item_plus"><a href="#service" class="js-ancor-link">Конфигурационные единицы</a></li>
+                                <li class="package__list-item package__list-item_plus"><a href="#service" class="js-ancor-link">Проблемы</a></li>
+                                <li class="package__list-item package__list-item_plus"><a href="#service" class="js-ancor-link">Изменения</a></li>
+                                <li class="package__list-item package__list-item_plus"><a href="#service" class="js-ancor-link">Релизы</a></li>
                             </ul>
                             <div>
                                 <div class="package__price">
@@ -853,7 +932,7 @@
                 <textarea name="feedback__comm" class="feedback__comm form__comm"
                           placeholder="Ваше сообщение"></textarea>
                 <div class="feedback__file-wrapper">
-                    <input type="file" name="feed__file" id="feed__file" class="inputfile feedback__file"
+                    <input type="file" name="feed__file" id="feed__file-two" class="inputfile feedback__file"
                            data-multiple-caption="{count} files selected" multiple>
                     <label for="feed__file">
                         <svg width="18" height="19" viewBox="0 0 18 19">
@@ -1157,7 +1236,7 @@
             персональных
             данных</a>
         </div>
-        <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+        <button type="submit" class="btn btn_red feedback__submit"><span>Отправить сообщение</span></button>
     </form>
 </div>
 <div class="modal" style="display: none;" id="callback">
@@ -1182,7 +1261,7 @@
             персональных
             данных</a>
         </div>
-        <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+        <button type="submit" class="btn btn_red feedback__submit"><span>Отправить сообщение</span></button>
     </form>
 </div>
 <div class="presentation modal" style="display: none;" id="presentation">
@@ -1212,7 +1291,7 @@
             персональных
             данных</a>
         </div>
-        <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+        <button type="submit" class="btn btn_red feedback__submit"><span>Отправить сообщение</span></button>
     </form>
 </div>
 <div class="predesign modal" style="display: none;" id="predesign">
@@ -1245,7 +1324,7 @@
             Нажимая на кнопку «Отправить сообщение», вы даёте согласие на <a href="">обработку персональных
             данных</a>
         </div>
-        <button type="submit" class="btn btn_red feedback__submit">Отправить сообщение</button>
+        <button type="submit" class="btn btn_red feedback__submit"><span>Отправить сообщение</span></button>
     </form>
 </div>
 <div class="result modal" style="display: none;" id="result">

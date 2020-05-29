@@ -307,16 +307,28 @@ p
       text-decoration: none
       &:hover
          color: $red
-    &-item.is-active .service__content-title, .synced .service__content-title
+    .cd-tabs__item--selected, .synced .service__content-title
       color: $red
     &-text
       display: none
-    &-item.is-active .service__content-text, .synced .service__content-text
+    .cd-tabs__item--selected + .service__content-text, .synced .service__content-text
       display: block
-.tabs-panel
-  display: none
-.tabs-panel.is-active
-  display: block
+  .cd-tabs__panel
+    display: none
+    animation: cd-fade-out 0.1s
+  .cd-tabs__panel--selected
+    display: block
+    animation: cd-fade-in 1.5s
+  @keyframes cd-fade-in
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+  @keyframes cd-fade-out
+    0%
+      opacity: 1
+    100%
+      opacity: 0
 
 //help
 
@@ -580,6 +592,8 @@ p
       align-items: center
       position: relative
       box-sizing: border-box
+      a
+        color: $black1
       &:nth-child(odd)
         background-color: #F2F2F2
       &:before

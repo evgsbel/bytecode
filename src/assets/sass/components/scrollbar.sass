@@ -49,24 +49,19 @@
 .mCSB_dragger_bar
   &:before
     content: ""
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7))
+    background:  linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
     height: 60px
-    width: 14px
+    width: 40px
     position: absolute
-    top: -60px
-    left: 0
-    -webkit-transition: all 0.1s
+    top: -65px
+    left: -15px
     transition: all 0.1s
-    -webkit-animation-name: slideme
     animation-name: slideme
-    -webkit-animation-duration: 3s
-    animation-duration: 3s
-    -webkit-animation-delay: 1s
-    animation-delay: 1s
-    -webkit-animation-timing-function: ease-in-out
+    animation-duration: 2s
+    animation-delay: .8s
     animation-timing-function: ease-in-out
-    -webkit-animation-iteration-count: infinite
     animation-iteration-count: infinite
+    transform: rotate(50deg)
   &:hover:before
     -webkit-animation: none
     -o-animation: none
@@ -74,8 +69,8 @@
 
 @keyframes slideme
   0%
-    top: -60px
+    top: -150px
   100%
-    top: 100%
+    top: 85%
 
 

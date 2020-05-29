@@ -5,6 +5,8 @@ import '@fancyapps/fancybox'
 import 'select2/dist/js/select2.min'
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min'
 import 'gsap/dist/gsap'
+import './js/tabs'
+import './js/aniamation'
 import './js/app'
 
 // SCSS
