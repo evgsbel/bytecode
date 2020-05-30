@@ -589,21 +589,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var select2_dist_js_select2_min__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(select2_dist_js_select2_min__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min */ "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js");
 /* harmony import */ var malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var gsap_dist_gsap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap/dist/gsap */ "./node_modules/gsap/dist/gsap.js");
-/* harmony import */ var gsap_dist_gsap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(gsap_dist_gsap__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _js_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/tabs */ "./src/js/tabs.js");
-/* harmony import */ var _js_tabs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_tabs__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _js_aniamation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/aniamation */ "./src/js/aniamation.js");
-/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/app */ "./src/js/app.js");
-/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_js_app__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
-/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/sass/app.sass */ "./src/assets/sass/app.sass");
-/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/sass/media.sass */ "./src/assets/sass/media.sass");
-/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _js_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/tabs */ "./src/js/tabs.js");
+/* harmony import */ var _js_tabs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_tabs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _js_aniamation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/aniamation */ "./src/js/aniamation.js");
+/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/app */ "./src/js/app.js");
+/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_js_app__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
+/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/sass/app.sass */ "./src/assets/sass/app.sass");
+/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/sass/media.sass */ "./src/assets/sass/media.sass");
+/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_10__);
 // JS
-
 
 
 
@@ -639,68 +636,164 @@ fetch("./assets/img/svg//sprite.svg").then(function (res) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var scrollmagic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! scrollmagic */ "./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js");
-/* harmony import */ var scrollmagic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(scrollmagic__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var scrollmagic_plugin_gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! scrollmagic-plugin-gsap */ "./node_modules/scrollmagic-plugin-gsap/index.js");
-/* harmony import */ var scrollmagic_plugin_gsap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(scrollmagic_plugin_gsap__WEBPACK_IMPORTED_MODULE_2__);
- // Or use scrollmagic-with-ssr to avoid server rendering problems
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var TimelineMax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! TimelineMax */ "./node_modules/gsap/src/minified/TimelineMax.min.js");
+/* harmony import */ var TimelineMax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(TimelineMax__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var ScrollMagic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ScrollMagic */ "./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js");
+/* harmony import */ var ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(ScrollMagic__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var animation_gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animation.gsap */ "./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js");
+/* harmony import */ var animation_gsap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(animation_gsap__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var debug_addIndicators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! debug.addIndicators */ "./node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js");
+/* harmony import */ var debug_addIndicators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(debug_addIndicators__WEBPACK_IMPORTED_MODULE_3__);
 
- // Also works with TweenLite and TimelineLite
 
 
-Object(scrollmagic_plugin_gsap__WEBPACK_IMPORTED_MODULE_2__["ScrollMagicPluginGsap"])(scrollmagic__WEBPACK_IMPORTED_MODULE_0__, gsap__WEBPACK_IMPORTED_MODULE_1__["TweenMax"], gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"]); // import {TimelineMax} from "gsap";
-// import * as ScrollMagic from "scrollmagic";
 
 $(function () {
-  var tl1p1 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
-      tl1p12 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
-      tl2p1 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
-      tl2p2 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
-      tl3p1 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
-      tl3p2 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
-      tl4p1 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"](),
-      tl4p2 = new gsap__WEBPACK_IMPORTED_MODULE_1__["TimelineMax"]();
-  var controller = new scrollmagic__WEBPACK_IMPORTED_MODULE_0__["Controller"]();
-  tl1p1 //.fromTo('.case__ttl', .2, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
-  .staggerFromTo('.steps__item', .2, {
-    rotationY: -40,
-    x: -10,
-    opacity: 0
-  }, {
-    rotationY: 0,
-    x: 0,
-    opacity: 1
-  }, .5);
-  tl1p12 //.fromTo('.layout__grid', 1, {top: -2000}, {top: 0}, 0.2)
-  //.staggerFromTo('.header', .8, {opacity: 0}, {opacity: 1}, 0.3)
-  // .staggerFromTo('.header__nav-link', .2, {x:30,opacity:0}, {x:0,opacity: 1}, 0.1)
-  .staggerFromTo('.package__item_left', 1.2, {
-    x: -30,
-    opacity: 0
-  }, {
-    x: 0,
-    opacity: 1
-  }, 0.6) // .staggerFromTo('.banner__subttl', .5, {x:-30,opacity:0}, {x:0,opacity:1}, 0.2)
-  .staggerFromTo('.package__item_right', .8, {
-    x: 30,
-    opacity: 0
-  }, {
-    x: 0,
-    opacity: 1
-  }, 1) //.staggerFromTo('.banner__left', .8, {y: 30, opacity: 0}, {y: 0, opacity: 1}, 1)
-  //.staggerFromTo('.banner__center', .8, {y: 30, opacity: 0}, {y: 0, opacity: 1}, 1)
-  // .staggerFromTo('.banner__descr', .5, {y:30,opacity:0}, {y:0,opacity:1}, 1)
-  .setTween(tl1p1).addTo(controller);
-  var scene1p2 = new scrollmagic__WEBPACK_IMPORTED_MODULE_0__["Scene"]({
-    triggerElement: ".steps",
-    triggerHook: 0.6 // reverse: false,
+  $(window).on('load', function () {
+    var tl1p1 = new TimelineMax__WEBPACK_IMPORTED_MODULE_0___default.a(),
+        tl1p2 = new TimelineMax__WEBPACK_IMPORTED_MODULE_0___default.a(),
+        tl2p1 = new TimelineMax__WEBPACK_IMPORTED_MODULE_0___default.a(),
+        tl2p2 = new TimelineMax__WEBPACK_IMPORTED_MODULE_0___default.a(),
+        tl3p1 = new TimelineMax__WEBPACK_IMPORTED_MODULE_0___default.a(),
+        tl3p2 = new TimelineMax__WEBPACK_IMPORTED_MODULE_0___default.a(),
+        tl4p1 = new TimelineMax__WEBPACK_IMPORTED_MODULE_0___default.a(),
+        tl4p2 = new TimelineMax__WEBPACK_IMPORTED_MODULE_0___default.a();
+    var controller = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Controller();
+    tl1p1.fromTo('.layout__grid', 1, {
+      top: -2000
+    }, {
+      top: 0
+    }, 0.2).staggerFromTo('.header__ttl', .8, {
+      opacity: 0
+    }, {
+      opacity: 1
+    }, 0.3) // .staggerFromTo('.header__nav-link', .2, {x:30,opacity:0}, {x:0,opacity: 1}, 0.1)
+    .staggerFromTo('.package__item_left', 1.2, {
+      x: -30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 0.6).staggerFromTo('.banner__subttl', .5, {
+      x: -30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 0.2).staggerFromTo('.banner__left', .8, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, 1).staggerFromTo('.banner__center', .8, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, 1); // .staggerFromTo('.banner__descr', .5, {y:30,opacity:0}, {y:0,opacity:1}, 1)
 
-  }).setTween(tl1p12).addTo(controller);
-  var scene1p1 = new scrollmagic__WEBPACK_IMPORTED_MODULE_0__["Scene"]({
-    triggerElement: ".package__wrapper",
-    triggerHook: 0 // reverse: false,
+    tl1p2.fromTo('.package__ttl', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.package__item_left', .5, {
+      x: -30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 0.6).staggerFromTo('.package__item_right', .8, {
+      x: 30,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, 1);
+    tl2p1.fromTo('.trust__ttl', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.trust__subttl', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, "-=0.7").staggerFromTo('.trust__item', .3, {
+      y: -50,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1
+    }, .2);
+    tl2p2.fromTo('.test__ttl', .5, {
+      y: 30,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y: 0
+    }, .5).staggerFromTo('.test__item', .3, {
+      x: -10,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1
+    }, .2);
+    tl3p1.staggerFromTo('.steps__item', .3, {
+      rotationY: -40,
+      x: -10,
+      opacity: 0
+    }, {
+      rotationY: 0,
+      x: 0,
+      opacity: 1
+    }, 0.4);
+    var scene1p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
+      triggerElement: ".header",
+      triggerHook: 0 // reverse: false,
 
+    }).setTween(tl1p1).addTo(controller);
+    var scene1p2 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
+      triggerElement: ".package",
+      triggerHook: 0.6 // reverse: false,
+
+    }).setTween(tl1p2).addTo(controller);
+    var scene2p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
+      triggerElement: ".interface",
+      triggerHook: 0.6 // reverse: false,
+
+    }).setTween(tl2p1).addTo(controller);
+    var scene2p2 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
+      triggerElement: ".test",
+      triggerHook: 0.6 // reverse: false,
+
+    }).setTween(tl2p2).addTo(controller);
+    var scene3p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
+      triggerElement: ".methodology__column",
+      triggerHook: 0.6 // reverse: false,
+
+    }).setTween(tl3p1).addTo(controller);
+    var scene3p2 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
+      triggerElement: ".methodology__column",
+      triggerHook: 0.6 // reverse: false,
+
+    }).setTween(tl3p2).addTo(controller);
+    var scene4p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
+      triggerElement: ".team",
+      triggerHook: 0.6 // reverse: false,
+
+    }).setTween(tl4p1).addTo(controller);
+    var scene4p2 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
+      triggerElement: ".footer",
+      triggerHook: 0.6 // reverse: false,
+
+    }).setTween(tl4p2).addTo(controller);
   });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -1214,4 +1307,4 @@ Math.easeInOutQuad = function (t, b, c, d) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.ce66b971643d1379d30c.js.map
+//# sourceMappingURL=app.9d8e585efdc72f0b5914.js.map

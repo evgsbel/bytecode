@@ -18,6 +18,7 @@ const PATHS = {
     assets: "assets/"
 };
 
+
 // Pages const for HtmlWebpackPlugin
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
 const PAGES_DIR = PATHS.src;
@@ -139,6 +140,18 @@ const plugins = () => {
 }
 
 module.exports = {
+    resolve: {
+        modules: ['node_modules'],
+        alias: {
+            'TweenLite': 'gsap/src/minified/TweenLite.min.js',
+            'TweenMax': 'gsap/src/minified/TweenMax.min.js',
+            'TimelineLite': 'gsap/src/minified/TimelineLite.min.js',
+            'TimelineMax': 'gsap/src/minified/TimelineMax.min.js',
+            'ScrollMagic': 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+            'animation.gsap': 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+            'debug.addIndicators': 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'
+        }
+    },
     //context: path.resolve(__dirname, 'src'),
     mode: 'development',
     externals: {
@@ -205,7 +218,7 @@ module.exports = {
                 loader: 'svg-sprite-loader',
                 options: {
                     extract: true,
-                    spriteFilename: `${PATHS.assets}img/svg`+'/sprite.svg', // this is the destination of your sprite sheet
+                    spriteFilename: `${PATHS.assets}img/svg` + '/sprite.svg', // this is the destination of your sprite sheet
                 }
             }
         ]

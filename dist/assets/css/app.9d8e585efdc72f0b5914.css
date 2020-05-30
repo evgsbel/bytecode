@@ -494,7 +494,7 @@ template {
   0% {
     top: -150px; }
   100% {
-    top: 85%; } }
+    top: 80%; } }
 
 .checkbox input {
   position: absolute;
@@ -2610,4 +2610,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.ce66b971643d1379d30c.css.map*/
+/*# sourceMappingURL=app.9d8e585efdc72f0b5914.css.map*/
