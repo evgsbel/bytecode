@@ -70,14 +70,14 @@ $(() => {
             .setTween(tl2p2)
             .addTo(controller);
         const scene3p1 = new ScrollMagic.Scene({
-            triggerElement: ".methodology__column",
+            triggerElement: ".methodology",
             triggerHook: 0.6,
             // reverse: false,
         })
             .setTween(tl3p1)
             .addTo(controller);
         const scene3p2 = new ScrollMagic.Scene({
-            triggerElement: ".methodology__column",
+            triggerElement: ".methodology",
             triggerHook: 0.6,
             // reverse: false,
         })

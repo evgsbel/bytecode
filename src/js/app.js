@@ -12,8 +12,10 @@ $(() => {
     //ancors
     $("a.js-ancor-link").click(function () {
         let elementClick = $(this).attr("href")
-        let destination = $(elementClick).offset().top;
+        let destination = $(elementClick).offset().top
+
         jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+        $(destination).addClass('click')
         return false;
     });
 });
@@ -30,12 +32,12 @@ $('.js-package__input_right').change(function () {
     if ($(this).is(':checked')) {
         $(this).parent().removeClass('unchecked');
         $(this).parent().addClass('checked');
-        $('.js-result-price_right').html('3 960');
+        $('.js-result-price_right').html('3 290');
 
     } else {
         $(this).parent().removeClass('checked');
         $(this).parent().addClass('unchecked');
-        $('.js-result-price_right').html('4 320');
+        $('.js-result-price_right').html('3 650');
 
     }
 });
@@ -43,11 +45,11 @@ $('.js-package__input_left').change(function () {
     if ($(this).is(':checked')) {
         $(this).parent().removeClass('unchecked');
         $(this).parent().addClass('checked');
-        $('.js-result-price_left').html('2 500');
+        $('.js-result-price_left').html('1 830');
     } else {
         $(this).parent().removeClass('checked');
         $(this).parent().addClass('unchecked');
-        $('.js-result-price_left').html('2 620');
+        $('.js-result-price_left').html('2 010');
     }
 });
 
@@ -218,6 +220,8 @@ $(() => {
         checkWidth(); // проверит при изменении размера окна клиента
     });
 });
+
+//header video autoplay
 $(() => {
   $('.js-play-video').click(function (ev) {
     $(this).addClass('is-playing')
@@ -227,17 +231,4 @@ $(() => {
     $(".header__video_frame")[0].src += "?autoplay=1";
   })
 })
-//scroll bar
-// $('.js-scrollbar').mCustomScrollbar({
-//     axis: 'y',
-//     theme: 'dark-thick',
-//     scrollInertia: '330',
-//     setHeight: 570,
-//     scrollButtons: true,
-//     scrollButtons: {enable: true}
-// });
-
-$(() => {
-
-});
 
