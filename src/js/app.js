@@ -218,7 +218,15 @@ $(() => {
         checkWidth(); // проверит при изменении размера окна клиента
     });
 });
-
+$(() => {
+  $('.js-play-video').click(function (ev) {
+    $(this).addClass('is-playing')
+    $('.header__video_play').fadeOut(100);
+    $('.header__video_overlay').fadeOut(100);
+    $('.header__video_frame').fadeIn(100);
+    $(".header__video_frame")[0].src += "?autoplay=1";
+  })
+})
 //scroll bar
 // $('.js-scrollbar').mCustomScrollbar({
 //     axis: 'y',

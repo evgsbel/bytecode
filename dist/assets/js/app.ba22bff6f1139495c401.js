@@ -668,13 +668,8 @@ $(function () {
     }, {
       opacity: 1
     }, 0.3) // .staggerFromTo('.header__nav-link', .2, {x:30,opacity:0}, {x:0,opacity: 1}, 0.1)
-    .staggerFromTo('.package__item_left', 1.2, {
-      x: -30,
-      opacity: 0
-    }, {
-      x: 0,
-      opacity: 1
-    }, 0.6).staggerFromTo('.banner__subttl', .5, {
+    //.staggerFromTo('.package__item_left', 1.2, {x: -30, opacity: 0}, {x: 0, opacity: 1}, 0.6)
+    .staggerFromTo('.banner__subttl', .5, {
       x: -30,
       opacity: 0
     }, {
@@ -700,19 +695,19 @@ $(function () {
     }, {
       opacity: 1,
       y: 0
-    }, .5).staggerFromTo('.package__item_left', .5, {
+    }, .5).staggerFromTo('.package__item_left', .4, {
       x: -30,
       opacity: 0
     }, {
       x: 0,
       opacity: 1
-    }, 0.6).staggerFromTo('.package__item_right', .8, {
+    }, 0.5).staggerFromTo('.package__item_right', .2, {
       x: 30,
       opacity: 0
     }, {
       x: 0,
       opacity: 1
-    }, 1);
+    }, .3);
     tl2p1.fromTo('.trust__ttl', .5, {
       y: 30,
       opacity: 0
@@ -745,7 +740,7 @@ $(function () {
       x: 0,
       opacity: 1
     }, .2);
-    tl3p1.staggerFromTo('.steps__item', .3, {
+    tl3p1.staggerFromTo('.steps__item', .1, {
       rotationY: -40,
       x: -10,
       opacity: 0
@@ -753,7 +748,7 @@ $(function () {
       rotationY: 0,
       x: 0,
       opacity: 1
-    }, 0.4);
+    }, 0.2);
     var scene1p1 = new ScrollMagic__WEBPACK_IMPORTED_MODULE_1___default.a.Scene({
       triggerElement: ".header",
       triggerHook: 0 // reverse: false,
@@ -1005,6 +1000,15 @@ $(function () {
   checkWidth();
   $(window).resize(function () {
     checkWidth(); // проверит при изменении размера окна клиента
+  });
+});
+$(function () {
+  $('.js-play-video').click(function (ev) {
+    $(this).addClass('is-playing');
+    $('.header__video_play').fadeOut(100);
+    $('.header__video_overlay').fadeOut(100);
+    $('.header__video_frame').fadeIn(100);
+    $(".header__video_frame")[0].src += "?autoplay=1";
   });
 }); //scroll bar
 // $('.js-scrollbar').mCustomScrollbar({
@@ -1307,4 +1311,4 @@ Math.easeInOutQuad = function (t, b, c, d) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.64dc057a171f97c7a089.js.map
+//# sourceMappingURL=app.ba22bff6f1139495c401.js.map

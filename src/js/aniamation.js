@@ -18,7 +18,7 @@ $(() => {
             .fromTo('.layout__grid', 1, {top: -2000}, {top: 0}, 0.2)
             .staggerFromTo('.header__ttl', .8, {opacity: 0}, {opacity: 1}, 0.3)
             // .staggerFromTo('.header__nav-link', .2, {x:30,opacity:0}, {x:0,opacity: 1}, 0.1)
-            .staggerFromTo('.package__item_left', 1.2, {x: -30, opacity: 0}, {x: 0, opacity: 1}, 0.6)
+            //.staggerFromTo('.package__item_left', 1.2, {x: -30, opacity: 0}, {x: 0, opacity: 1}, 0.6)
             .staggerFromTo('.banner__subttl', .5, {x: -30, opacity: 0}, {x: 0, opacity: 1}, 0.2)
 
             .staggerFromTo('.banner__left', .8, {y: 30, opacity: 0}, {y: 0, opacity: 1}, 1)
@@ -26,8 +26,8 @@ $(() => {
         // .staggerFromTo('.banner__descr', .5, {y:30,opacity:0}, {y:0,opacity:1}, 1)
         tl1p2
            .fromTo('.package__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
-          .staggerFromTo('.package__item_left', .5, {x: -30, opacity: 0}, {x: 0, opacity: 1}, 0.6)
-          .staggerFromTo('.package__item_right', .8, {x: 30, opacity: 0}, {x: 0, opacity: 1}, 1)
+          .staggerFromTo('.package__item_left', .4, {x: -30, opacity: 0}, {x: 0, opacity: 1}, 0.5)
+          .staggerFromTo('.package__item_right', .2, {x: 30, opacity: 0}, {x: 0, opacity: 1}, .3)
         tl2p1
             .fromTo('.trust__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
             .staggerFromTo('.trust__subttl', .5, {y: 30, opacity: 0}, {y: 0, opacity: 1}, "-=0.7")
@@ -36,11 +36,11 @@ $(() => {
             .fromTo('.test__ttl', .5, {y: 30, opacity: 0}, {opacity: 1, y: 0}, .5)
             .staggerFromTo('.test__item', .3, {x: -10, opacity: 0}, {x: 0, opacity: 1}, .2)
         tl3p1
-            .staggerFromTo('.steps__item', .3, {rotationY: -40, x: -10, opacity: 0}, {
+            .staggerFromTo('.steps__item', .1, {rotationY: -40, x: -10, opacity: 0}, {
                 rotationY: 0,
                 x: 0,
                 opacity: 1
-            }, 0.4)
+            }, 0.2)
         const scene1p1 = new ScrollMagic.Scene({
             triggerElement: ".header",
             triggerHook: 0,
