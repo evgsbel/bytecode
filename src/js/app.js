@@ -15,7 +15,7 @@ $(() => {
         let destination = $(elementClick).offset().top
 
         jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-        $(destination).addClass('click')
+        console.log(destination)
         return false;
     });
 });

@@ -818,7 +818,7 @@ $(function () {
     jQuery("html:not(:animated),body:not(:animated)").animate({
       scrollTop: destination
     }, 800);
-    $(destination).addClass('click');
+    console.log(destination);
     return false;
   });
 });
@@ -1303,4 +1303,4 @@ Math.easeInOutQuad = function (t, b, c, d) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.4a7580e2c5df48f9a898.js.map
+//# sourceMappingURL=app.aadb172f4e8ea819ee05.js.map
