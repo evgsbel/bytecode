@@ -79,8 +79,10 @@ $('[data-fancybox]').fancybox({
             '<use xlink:href="#modal-close"></use>' +
             '</svg>' +
             "</button>"
-    }
-});
+    },
+    clickContent    : false,
+    toolbar         : false,
+})
 
 $(() => {
     function checkWidth() {
