@@ -1979,9 +1979,11 @@ p {
 .predesign {
   margin: 50px 0; }
 
-.result svg {
-  display: block;
-  margin: 0 auto; }
+.result {
+  display: none; }
+  .result svg {
+    display: block;
+    margin: 0 auto; }
 
 .fancybox-bg {
   background: #3D525D; }
@@ -2625,4 +2627,4 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
 
 
-/*# sourceMappingURL=app.79181b98521379903f42.css.map*/
+/*# sourceMappingURL=app.47ccfeeeb9c8f12a004c.css.map*/
