@@ -49,7 +49,7 @@
     "import-loader": "^1.0.1",
     "imports-loader": "^0.8.0",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1",
